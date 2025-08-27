@@ -1,0 +1,1120 @@
+Lab for beginnersОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ For_Beginers
+
+Дата: 2025-05-14 11:02:03
+ФИО: Мохамед Махмуд
+Группа: 3342
+
+
+Task 1:
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ touch labForBeginersLog.log
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log
+
+Task 2:
+2.1 & 2.2)
+
+# вывод текущей даты (Shows current date)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ date
+wed May 14 11:00:14 AM UTC 2025
+
+# кто находится в системе; (who is in the system)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ who
+mukhamed pts/1        2025-05-14 14:46 (login screen)
+
+
+# выведите имя пользователя текущего пользователя (print the username of the current user)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ whoami
+mukhamed
+
+# полное имя файла-терминала (full name of the terminal file)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ tty
+/dev/pts/0
+
+# входное имя (display the login name of the current logged in user)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ logname
+mukhamed
+
+# имя  UNIX-системы  ("имя компьютера") (UNIX system name ("computer name"))
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ uname
+Linux
+
+# информация о процессорах/ядрах компьютера или виртуальной машины (information about the processors/cores of a computer or virtual machine)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   4
+  On-line CPU(s) list:    0-3
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+    CPU family:           23
+    Model:                24
+    Thread(s) per core:   1
+    Core(s) per socket:   4
+    Socket(s):            1
+    Stepping:             1
+    BogoMIPS:             4192.12
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sy
+                          scall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_f
+                          req pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor
+                           lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase bmi1 avx2 bmi2
+                           rdseed adx clflushopt sha_ni arat
+Virtualization features:  
+  Hypervisor vendor:      KVM
+  Virtualization type:    full
+Caches (sum of all):      
+  L1d:                    128 KiB (4 instances)
+  L1i:                    256 KiB (4 instances)
+  L2:                     2 MiB (4 instances)
+  L3:                     16 MiB (4 instances)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-3
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Mitigation; untrained return thunk; SMT disabled
+  Spec rstack overflow:   Vulnerable: Safe RET, no microcode
+  Spec store bypass:      Not affected
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+
+
+# информация о периферийном оборудовании (display detailed information on the system's hardware configuration from various files in the /proc directory in the system.)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ lshw
+WARNING: you should run this program as super-user.
+ubuntu                      
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 9728MiB
+     *-cpu
+          product: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 1
+          bus info: cpu@0
+          version: 23.24.1
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase bmi1 avx2 bmi2 rdseed adx clflushopt sha_ni arat
+          configuration: microcode=135299337
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0303
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:01
+                product: PnP device PNP0f03
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=i8042 aux
+        *-ide
+             description: IDE interface
+             product: 82371AB/EB/MB PIIX4 IDE
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             logical name: scsi1
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compat_mode pci_native_mode bus_master emulated
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:d000(size=16)
+           *-cdrom
+                description: DVD reader
+                product: CD-ROM
+                vendor: VBOX
+                physical id: 0.0.0
+                bus info: scsi@1:0.0.0
+                logical name: /dev/cdrom
+                logical name: /dev/sr0
+                logical name: /media/mukhamed/VBox_GAs_7.1.6
+                version: 1.0
+                capabilities: removable audio dvd
+                configuration: ansiversion=5 mount.fstype=iso9660 mount.options=ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=1000,dmode=500,fmode=400,iocharset=utf8 state=mounted status=ready
+              *-medium
+                   physical id: 0
+                   logical name: /dev/cdrom
+                   logical name: /media/mukhamed/VBox_GAs_7.1.6
+                   configuration: mount.fstype=iso9660 mount.options=ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=1000,dmode=500,fmode=400,iocharset=utf8 state=mounted
+        *-display
+             description: VGA compatible controller
+             product: SVGA II Adapter
+             vendor: VMware
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master rom fb
+             configuration: depth=32 driver=vmwgfx latency=64 resolution=1280,800
+             resources: irq:18 ioport:d010(size=16) memory:e0000000-e0ffffff memory:f0000000-f01fffff memory:c0000-dffff
+        *-network
+             description: Ethernet interface
+             product: 82540EM Gigabit Ethernet Controller
+             vendor: Intel Corporation
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             logical name: enp0s3
+             version: 02
+             serial: 08:00:27:20:5c:5a
+             size: 1Gbit/s
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 66MHz
+             capabilities: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000 driverversion=6.11.0-24-generic duplex=full ip=10.0.2.15 latency=64 link=yes mingnt=255 multicast=yes port=twisted pair speed=1Gbit/s
+             resources: irq:19 memory:f0200000-f021ffff ioport:d020(size=8)
+        *-generic
+             description: System peripheral
+             product: VirtualBox mouse integration
+             vendor: InnoTek Systemberatung GmbH
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             logical name: input8
+             logical name: /dev/input/event6
+             logical name: /dev/input/js1
+             logical name: /dev/input/mouse2
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci
+             configuration: driver=vboxguest latency=0
+             resources: irq:20 ioport:d040(size=32) memory:f0400000-f07fffff memory:f0800000-f0803fff
+        *-multimedia
+             description: Multimedia audio controller
+             product: 82801AA AC'97 Audio Controller
+             vendor: Intel Corporation
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             logical name: card0
+             logical name: /dev/snd/controlC0
+             logical name: /dev/snd/pcmC0D0c
+             logical name: /dev/snd/pcmC0D0p
+             logical name: /dev/snd/pcmC0D1c
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=snd_intel8x0 latency=64
+             resources: irq:21 ioport:d100(size=256) ioport:d200(size=64)
+        *-usb:0
+             description: USB controller
+             product: KeyLargo/Intrepid USB
+             vendor: Apple Inc.
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=64
+             resources: irq:22 memory:f0804000-f0804fff
+        *-bridge
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 08
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge
+             configuration: driver=piix4_smbus latency=0
+             resources: irq:9
+        *-usb:1
+             description: USB controller
+             product: 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: b
+             bus info: pci@0000:00:0b.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=64
+             resources: irq:19 memory:f0805000-f0805fff
+        *-sata
+             description: SATA controller
+             product: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: d
+             bus info: pci@0000:00:0d.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: sata ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=64
+             resources: irq:21 ioport:d240(size=8) ioport:d248(size=4) ioport:d250(size=8) ioport:d258(size=4) ioport:d260(size=16) memory:f0806000-f0807fff
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Sleep Button
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: AT Translated Set 2 keyboard
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:3
+       product: Video Bus
+       physical id: 4
+       logical name: input4
+       logical name: /dev/input/event3
+       capabilities: platform
+  *-input:4
+       product: ImExPS/2 Generic Explorer Mouse
+       physical id: 5
+       logical name: input5
+       logical name: /dev/input/event4
+       logical name: /dev/input/mouse0
+       capabilities: i8042
+  *-input:5
+       product: VirtualBox USB Tablet
+       physical id: 6
+       logical name: input6
+       logical name: /dev/input/event5
+       logical name: /dev/input/js0
+       logical name: /dev/input/mouse1
+       capabilities: usb
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+
+
+2.3)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ man date
+DATE(1)                                                 User Commands                                                 DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display date and time in the given FORMAT.  With -s, or with [MMDDhhmm[[CC]YY][.ss]], set the date and time.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       --debug
+              annotate the parsed date, and warn about questionable usage to stderr
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output date/time in ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'minutes', 'seconds', or
+              'ns' for date and time to the indicated precision.  Example: 2006-08-14T02:34:56-06:00
+
+       --resolution
+              output the available resolution of timestamps Example: 0.000000001
+
+       -R, --rfc-email
+.....
+
+2.3)
+
+# Создание базового каталога (Basic directory creation)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir path
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir path/new/
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir path/new/directorey
+
+# Создание родительских каталогов (Create parent directories)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir -p path/multi-level
+
+# Устанавливайте разрешения при создании (например, 755) (Set permissions while creating (e.g., 755))
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir -m 755 path/dir-with-permissions
+
+2.4) a)
+
+# выведите содержимое каждого указанного параметра каталога или имя каждого указанного параметра файла( output the contents of each specified Directory parameter or the name of each specified File parameter)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls path/
+dir-with-permissions  multi-level  new
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls -l path/
+total 12
+drwxr-xr-x 2 mukhamed mukhamed 4096 May  8 11:36 dir-with-permissions
+drwxrwxr-x 2 mukhamed mukhamed 4096 May  8 11:35 multi-level
+drwxrwxr-x 3 mukhamed mukhamed 4096 May  8 11:34 new
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls labForBeginersLog.log path/
+labForBeginersLog.log
+
+path/:
+dir-with-permissions  multi-level  new
+
+2.4) b)
+# отобразить содержимое файла (display the file content)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat labForBeginersLog.log 
+Lab for beginners
+
+# отобразить содержимое файла (display the file content)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat test.txt 
+Hello World!
+
+# отобразить содержимое обоих файлов (display the file content for both files)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat labForBeginersLog.log test.txt 
+Lab for beginners
+Hello World!
+
+2.4) c)
+
+# переименовать имя файла (rename file name)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mv test.txt renamed-file.txt
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  renamed-file.txt
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat test.txt
+cat: test.txt: No such file or directory
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat renamed-file.txt 
+Hello World!
+
+# скопировать файл (copy a file)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cp renamed-file.txt copied-file.txt 
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+copied-file.txt  labForBeginersLog.log  path  renamed-file.txt
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat copied-file.txt 
+Hello World!
+
+# удалить файл (remove a file)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ rm copied-file.txt 
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  renamed-file.txt
+
+2.5)
+
+# показать полный текущий путь (show the full current path)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ pwd
+/home/mukhamed/OS/os25-3342/mukhamed_makhmoud_LabForBeginners
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls prog.c 
+prog.c
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  prog.c  renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls -l
+total 12
+-rw-rw-r-- 1 mukhamed mukhamed   18 May  8 11:48 labForBeginersLog.log
+drwxrwxr-x 5 mukhamed mukhamed 4096 May  8 11:36 path
+-rw-rw-r-- 1 mukhamed mukhamed    0 May  8 12:06 prog.c
+-rw-rw-r-- 1 mukhamed mukhamed   13 May  8 11:49 renamed-file.txt
+
+mukhamed@mukhamed:~/Desktop/OS-LABS/os25-3342$ cd ..
+mukhamed@mukhamed:~/Desktop/OS-LABS$ cd ..
+mukhamed@mukhamed:~/Desktop$ cd ..
+mukhamed@mukhamed:~$ cd ..
+mukhamed@mukhamed:/home$ cd ..
+mukhamed@mukhamed:/$ cd ..
+mukhamed@mukhamed:/$ ls
+bin                boot   dev  home  lib64              lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  cdrom  etc  lib   lib.usr-is-merged  media       opt  root  sbin  snap                sys  usr
+
+# determine the owners of the / , /bin
+mukhamed@mukhamed:/$ ls -ld /
+drwxr-xr-x 23 root root 4096 Mar 29 08:14 /
+mukhamed@mukhamed:/$ ls -ld /bin
+lrwxrwxrwx 1 root root 7 Apr 22  2024 /bin -> usr/bin
+
+# Изменение содержимого каталогов / (root) или /bin в Linux возможно, но для этого требуются права суперпользователя (администратора)
+# Modifying the contents of the / (root) or /bin directories in Linux is possible, but it requires root (administrative) privileges 
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  prog.c  renamed-file.txt
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ mkdir sub-dir
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cd sub-dir/
+mukhamed@mukhamed:~OS/os25-3342/mukhamed_makhmoud_LabForBeginnerssub-dir$ cp ../prog.c /
+cp: cannot create regular file '/prog.c': Permission denied
+mukhamed@mukhamed:~OS/os25-3342/mukhamed_makhmoud_LabForBeginnerssub-dir$ cp ../prog.c ./
+mukhamed@mukhamed:~OS/os25-3342/mukhamed_makhmoud_LabForBeginnerssub-dir$ ls
+prog.c
+
+# removing non-empty dir
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ rmdir sub-dir/
+rmdir: failed to remove 'sub-dir/': Directory not empty
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ rm ./sub-dir/prog.c 
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ rmdir sub-dir/
+
+
+2.6)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ps
+    PID TTY          TIME CMD
+  11609 pts/0    00:00:00 bash
+  22664 pts/0    00:00:00 ps
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ps -A
+    PID TTY          TIME CMD
+      1 ?        00:00:04 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_gp
+      5 ?        00:00:00 kworker/R-sync_wq
+      6 ?        00:00:00 kworker/R-slub_flushwq
+      7 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-events_highpri
+     12 ?        00:00:00 kworker/R-mm_percpu_wq
+     13 ?        00:00:00 rcu_tasks_kthread
+     14 ?        00:00:00 rcu_tasks_rude_kthread
+     15 ?        00:00:00 rcu_tasks_trace_kthread
+     16 ?        00:00:00 ksoftirqd/0
+     17 ?        00:00:08 rcu_preempt
+     18 ?        00:00:00 rcu_exp_par_gp_kthread_worker/0
+     19 ?        00:00:00 rcu_exp_gp_kthread_worker
+     20 ?        00:00:00 migration/0
+     21 ?        00:00:00 idle_inject/0
+     22 ?        00:00:00 cpuhp/0
+     23 ?        00:00:00 cpuhp/1
+     24 ?        00:00:00 idle_inject/1
+     25 ?        00:00:00 migration/1
+     26 ?        00:00:00 ksoftirqd/1
+     28 ?        00:00:00 kworker/1:0H-events_highpri
+     29 ?        00:00:00 cpuhp/2
+     30 ?        00:00:00 idle_inject/2
+     31 ?        00:00:00 migration/2
+     32 ?        00:00:00 ksoftirqd/2
+     34 ?        00:00:00 kworker/2:0H-kblockd
+     35 ?        00:00:00 cpuhp/3
+     36 ?        00:00:00 idle_inject/3
+     37 ?        00:00:00 migration/3
+     38 ?        00:00:00 ksoftirqd/3
+     40 ?        00:00:00 kworker/3:0H-kblockd
+     41 ?        00:00:00 kdevtmpfs
+     42 ?        00:00:00 kworker/R-inet_frag_wq
+     44 ?        00:00:00 kauditd
+     45 ?        00:00:00 khungtaskd
+     47 ?        00:00:00 oom_reaper
+     48 ?        00:00:00 kworker/R-writeback
+     49 ?        00:00:00 kcompactd0
+     50 ?        00:00:00 ksmd
+     51 ?        00:00:00 khugepaged
+     52 ?        00:00:00 kworker/R-kintegrityd
+     53 ?        00:00:00 kworker/R-kblockd
+     54 ?        00:00:00 kworker/R-blkcg_punt_bio
+     55 ?        00:00:00 irq/9-acpi
+     58 ?        00:00:00 kworker/R-tpm_dev_wq
+     59 ?        00:00:00 kworker/R-ata_sff
+     60 ?        00:00:00 kworker/R-md
+     61 ?        00:00:00 kworker/R-md_bitmap
+     62 ?        00:00:00 kworker/R-edac-poller
+     63 ?        00:00:00 kworker/R-devfreq_wq
+     64 ?        00:00:00 watchdogd
+     65 ?        00:00:00 kworker/0:1H-kblockd
+     66 ?        00:00:00 kswapd0
+     67 ?        00:00:00 ecryptfs-kthread
+     69 ?        00:00:00 kworker/R-kthrotld
+     70 ?        00:00:00 kworker/R-acpi_thermal_pm
+     71 ?        00:00:00 scsi_eh_0
+     72 ?        00:00:00 kworker/R-scsi_tmf_0
+     73 ?        00:00:00 scsi_eh_1
+     74 ?        00:00:00 kworker/R-scsi_tmf_1
+     78 ?        00:00:00 kworker/R-mld
+     79 ?        00:00:00 kworker/R-ipv6_addrconf
+     86 ?        00:00:00 kworker/R-kstrp
+     88 ?        00:00:00 kworker/u17:0-ttm
+    101 ?        00:00:00 kworker/R-charger_manager
+    104 ?        00:00:00 kworker/2:1H-kblockd
+    105 ?        00:00:01 kworker/1:1H-kblockd
+    158 ?        00:00:01 kworker/2:2-mm_percpu_wq
+    164 ?        00:00:00 scsi_eh_2
+    165 ?        00:00:00 kworker/R-scsi_tmf_2
+    212 ?        00:00:01 jbd2/sda2-8
+    213 ?        00:00:00 kworker/R-ext4-rsv-conversion
+    262 ?        00:00:00 systemd-journal
+    336 ?        00:00:00 systemd-udevd
+    479 ?        00:00:00 psimon
+    522 ?        00:00:00 kworker/R-cryptd
+    531 ?        00:00:03 systemd-oomd
+    532 ?        00:00:00 systemd-resolve
+    555 ?        00:00:00 kworker/3:2H-kblockd
+    566 ?        00:00:00 irq/18-vmwgfx
+    567 ?        00:00:00 kworker/R-ttm
+    825 ?        00:00:00 avahi-daemon
+    826 ?        00:00:03 dbus-daemon
+    831 ?        00:00:00 gnome-remote-de
+    852 ?        00:00:00 polkitd
+    853 ?        00:00:00 power-profiles-
+    859 ?        00:00:08 snapd
+    863 ?        00:00:00 accounts-daemon
+    867 ?        00:00:00 cron
+    868 ?        00:00:00 switcheroo-cont
+    870 ?        00:00:00 systemd-logind
+    871 ?        00:00:00 udisksd
+    875 ?        00:00:00 avahi-daemon
+    876 ?        00:00:00 rsyslogd
+   1016 ?        00:00:00 NetworkManager
+   1017 ?        00:00:00 wpa_supplicant
+   1042 ?        00:00:00 ModemManager
+   1180 ?        00:00:00 cupsd
+   1183 ?        00:00:00 unattended-upgr
+   1203 ?        00:00:00 kerneloops
+   1206 ?        00:00:00 kerneloops
+   1210 ?        00:00:00 gdm3
+   1223 ?        00:00:00 cups-browsed
+   1304 ?        00:00:00 rtkit-daemon
+   1418 ?        00:00:00 colord
+   1472 ?        00:00:00 upowerd
+   1787 ?        00:00:00 gdm-session-wor
+   1805 ?        00:00:01 systemd
+   1811 ?        00:00:00 (sd-pam)
+   1826 ?        00:00:01 pipewire
+   1827 ?        00:00:00 pipewire
+   1829 ?        00:00:00 wireplumber
+   1830 ?        00:00:00 pipewire-pulse
+   1835 ?        00:00:01 dbus-daemon
+   1836 ?        00:00:00 gnome-keyring-d
+   1872 ?        00:00:00 xdg-document-po
+   1876 ?        00:00:00 xdg-permission-
+   1883 ?        00:00:00 fusermount3
+   1940 tty2     00:00:00 gdm-wayland-ses
+   1945 tty2     00:00:00 gnome-session-b
+   2002 ?        00:00:00 gcr-ssh-agent
+   2003 ?        00:00:00 gnome-session-c
+   2015 ?        00:00:00 gvfsd
+   2025 ?        00:00:00 gvfsd-fuse
+   2028 ?        00:00:00 gnome-session-b
+   2067 ?        00:00:00 at-spi-bus-laun
+   2071 ?        00:31:37 gnome-shell
+   2078 ?        00:00:00 dbus-daemon
+   2139 ?        00:00:00 at-spi2-registr
+   2155 ?        00:00:00 gnome-shell-cal
+   2163 ?        00:00:00 gjs
+   2174 ?        00:00:11 ibus-daemon
+   2175 ?        00:00:00 gsd-a11y-settin
+   2179 ?        00:00:00 gsd-color
+   2183 ?        00:00:00 gsd-datetime
+   2184 ?        00:00:00 gsd-housekeepin
+   2189 ?        00:00:00 gsd-keyboard
+   2192 ?        00:00:00 gsd-media-keys
+   2197 ?        00:00:00 gsd-power
+   2199 ?        00:00:00 gsd-print-notif
+   2200 ?        00:00:00 gsd-rfkill
+   2201 ?        00:00:00 gsd-screensaver
+   2203 ?        00:00:00 gsd-sharing
+   2204 ?        00:00:00 gsd-smartcard
+   2205 ?        00:00:00 gsd-sound
+   2210 ?        00:00:00 gsd-wacom
+   2213 ?        00:00:00 gsd-disk-utilit
+   2220 ?        00:00:00 evolution-alarm
+   2325 ?        00:00:00 ibus-memconf
+   2326 ?        00:00:03 ibus-extension-
+   2341 ?        00:00:00 gsd-printer
+   2370 ?        00:00:00 ibus-portal
+   2381 ?        00:00:00 gvfs-udisks2-vo
+   2394 ?        00:00:00 gvfs-goa-volume
+   2395 ?        00:00:00 evolution-sourc
+   2404 ?        00:00:00 goa-daemon
+   2417 ?        00:00:00 goa-identity-se
+   2419 ?        00:00:00 gvfs-afc-volume
+   2430 ?        00:00:00 gvfs-mtp-volume
+   2435 ?        00:00:00 gvfs-gphoto2-vo
+   2448 ?        00:00:03 ibus-engine-sim
+   2486 ?        00:00:00 dconf-service
+   2497 ?        00:00:00 tracker-miner-f
+   2508 ?        00:00:00 evolution-calen
+   2511 ?        00:00:00 gjs
+   2531 ?        00:00:00 gvfsd-trash
+   2554 ?        00:00:00 evolution-addre
+   2648 ?        00:00:00 xdg-desktop-por
+   2654 ?        00:00:00 xdg-desktop-por
+   2655 ?        00:00:00 gvfsd-metadata
+   2677 ?        00:00:00 xdg-desktop-por
+   2701 ?        00:00:00 snapd-desktop-i
+   2759 ?        00:00:00 snapd-desktop-i
+   2825 ?        00:00:00 Xwayland
+   2829 ?        00:00:00 gsd-xsettings
+   2850 ?        00:00:00 ibus-x11
+   2852 ?        00:00:00 mutter-x11-fram
+   2910 ?        00:00:00 obexd
+   2928 ?        00:00:00 update-notifier
+   3567 ?        00:00:00 gvfsd-recent
+  10159 ?        00:17:49 firefox
+  10447 ?        00:00:00 Socket Process
+  10466 ?        00:00:07 Privileged Cont
+  10506 ?        00:00:00 snap
+  10668 ?        00:00:02 WebExtensions
+  10861 ?        00:00:06 Utility Process
+  10872 ?        00:01:15 Isolated Web Co
+  10891 ?        00:02:23 Isolated Web Co
+  11131 ?        00:04:29 Isolated Web Co
+  11415 ?        00:00:16 Isolated Web Co
+  11470 ?        00:00:11 RDD Process
+  11482 ?        00:00:01 speech-dispatch
+  11510 ?        00:00:00 sd_espeak-ng-mb
+  11525 ?        00:00:00 sd_espeak-ng
+  11528 ?        00:00:00 sd_dummy
+  11531 ?        00:00:00 sd_openjtalk
+  11600 ?        00:00:26 gnome-terminal-
+  11609 pts/0    00:00:00 bash
+  11712 ?        00:00:33 nautilus
+  11782 ?        00:00:01 fwupd
+  11876 ?        00:00:11 Isolated Web Co
+  13050 ?        00:00:00 psimon
+  18871 ?        00:00:00 kworker/R-iprt-VBoxWQueue
+  18892 ?        00:00:03 VBoxDRMClient
+  18894 ?        00:00:01 VBoxService
+  19399 ?        00:00:02 Isolated Web Co
+  19472 ?        00:01:11 Isolated Web Co
+  19926 ?        00:00:08 Isolated Web Co
+  19962 ?        00:00:01 Web Content
+  20068 ?        00:00:01 Web Content
+  20138 ?        00:00:00 kworker/3:3-events
+  20417 ?        00:00:00 kworker/0:3
+  20494 ?        00:00:00 gjs
+  20548 ?        00:00:00 kworker/u17:2
+  21024 ?        00:00:00 kworker/3:1-cgwb_release
+  21079 ?        00:00:22 kworker/u16:3-flush-8:0
+  21342 ?        00:00:00 kworker/1:1-cgroup_destroy
+  21898 ?        00:00:00 Web Content
+  21923 ?        00:00:00 kworker/0:1-events
+  21924 ?        00:00:00 kworker/1:0-events
+  21938 ?        00:00:13 kworker/u16:1-events_unbound
+  22096 ?        00:00:00 kworker/2:1-cgroup_destroy
+  22150 ?        00:00:07 kworker/u16:0-flush-8:0
+  22592 ?        00:00:00 kworker/2:0
+  22593 ?        00:00:00 kworker/2:3-cgroup_destroy
+  22597 ?        00:00:02 kworker/u16:2-events_power_efficient
+  22702 pts/0    00:00:00 ps
+
+Task 3:
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ gcc prog.c -o prog.o
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  prog.c  prog.o  renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ gcc prog.c -o prog
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+labForBeginersLog.log  path  prog  prog.c  prog.o  renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./prog
+Hello, everybody ! 
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./prog > res
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat res
+Hello, everybody ! 
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ gcc my_open.c -o my_open
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./my_open 
+открываемый файл не указан
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./my_open renamed-file.txt 
+./my_open: файл renamed-file.txt открыт
+
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ touch file.name.c
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ gcc file_name.c -o file_name
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./file_name || ./my_open
+renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./file_name || ./new_open
+renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./file_name | ./new_open
+./new_open: successfully opened renamed-file.txt
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ./file_name && ./new_open
+renamed-file.txt
+renamed-file.txt
+./new_open: successfully opened renamed-file.txt
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ 
+
+Task 4:
+
+4.1)
+
+mukhamed@mukhamed:/$ ls -l /tmp | grep '^d'
+drwx------ 4 root root 4096 May  9 08:34 snap-private-tmp
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-colord.service-t9i9xf
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-ModemManager.service-ogjLZA
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-polkit.service-CQWxjJ
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-power-profiles-daemon.service-EqW6Xj
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-switcheroo-control.service-F0pq0U
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-logind.service-lL5jz9
+drwx------ 3 root root 4096 May  9 08:32 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-oomd.service-k6XJ9o
+drwx------ 3 root root 4096 May  9 08:32 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-resolved.service-FBNf65
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-timesyncd.service-pU3kCw
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-upower.service-mPucn0
+
+mukhamed@mukhamed:/$ ls -l /tmp | grep ' root '
+drwx------ 4 root root 4096 May  9 08:34 snap-private-tmp
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-colord.service-t9i9xf
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-ModemManager.service-ogjLZA
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-polkit.service-CQWxjJ
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-power-profiles-daemon.service-EqW6Xj
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-switcheroo-control.service-F0pq0U
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-logind.service-lL5jz9
+drwx------ 3 root root 4096 May  9 08:32 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-oomd.service-k6XJ9o
+drwx------ 3 root root 4096 May  9 08:32 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-resolved.service-FBNf65
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-systemd-timesyncd.service-pU3kCw
+drwx------ 3 root root 4096 May  9 08:33 systemd-private-fd1270ab73704cc8b3ee4f628278adaa-upower.service-mPucn0
+
+4.2)
+
+mukhamed@mukhamed:/$ who | grep -E '\(:[0-9]+\)' | cut -d ' ' -f 1 | id -u
+1000
+
+mukhamed@mukhamed:/$ whoami | cut -d ' ' -f 1
+mukhamed
+
+4.3)
+
+mukhamed@mukhamed:/$ ls -l | tr '[:lower:]' '[:upper:]'
+TOTAL 88
+LRWXRWXRWX   1 ROOT ROOT     7 APR 22  2024 BIN -> USR/BIN
+DRWXR-XR-X   2 ROOT ROOT  4096 FEB 26  2024 BIN.USR-IS-MERGED
+DRWXR-XR-X   3 ROOT ROOT  4096 MAY  8 13:56 BOOT
+DR-XR-XR-X   2 ROOT ROOT  4096 MAR 29 08:12 CDROM
+DRWXR-XR-X  19 ROOT ROOT  4280 MAY  9 08:33 DEV
+DRWXR-XR-X 140 ROOT ROOT 12288 MAY  8 10:53 ETC
+DRWXR-XR-X   3 ROOT ROOT  4096 MAR 29 08:43 HOME
+LRWXRWXRWX   1 ROOT ROOT     7 APR 22  2024 LIB -> USR/LIB
+LRWXRWXRWX   1 ROOT ROOT     9 APR 22  2024 LIB64 -> USR/LIB64
+DRWXR-XR-X   2 ROOT ROOT  4096 APR  8  2024 LIB.USR-IS-MERGED
+DRWX------   2 ROOT ROOT 16384 MAR 29 08:15 LOST+FOUND
+DRWXR-XR-X   3 ROOT ROOT  4096 MAY  8 10:30 MEDIA
+DRWXR-XR-X   2 ROOT ROOT  4096 AUG 27  2024 MNT
+DRWXR-XR-X   3 ROOT ROOT  4096 MAY  8 10:52 OPT
+DR-XR-XR-X 291 ROOT ROOT     0 MAY  9 08:32 PROC
+DRWX------   5 ROOT ROOT  4096 MAR 29 08:43 ROOT
+DRWXR-XR-X  34 ROOT ROOT   900 MAY  9 08:33 RUN
+LRWXRWXRWX   1 ROOT ROOT     8 APR 22  2024 SBIN -> USR/SBIN
+DRWXR-XR-X   2 ROOT ROOT  4096 MAR 31  2024 SBIN.USR-IS-MERGED
+DRWXR-XR-X  14 ROOT ROOT  4096 MAY  1 12:49 SNAP
+DRWXR-XR-X   2 ROOT ROOT  4096 AUG 27  2024 SRV
+DR-XR-XR-X  13 ROOT ROOT     0 MAY  9 08:32 SYS
+DRWXRWXRWT  17 ROOT ROOT  4096 MAY  9 08:38 TMP
+DRWXR-XR-X  12 ROOT ROOT  4096 AUG 27  2024 USR
+DRWXR-XR-X  14 ROOT ROOT  4096 MAR 29 08:42 VAR
+
+4.4)
+
+# Sort files alphabetically (by filename)
+mukhamed@mukhamed:/$ ls -l | sort -k 9
+total 88
+lrwxrwxrwx   1 root root     7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   3 root root  4096 May  8 13:56 boot
+dr-xr-xr-x   2 root root  4096 Mar 29 08:12 cdrom
+drwxr-xr-x  19 root root  4280 May  9 08:33 dev
+drwxr-xr-x 140 root root 12288 May  8 10:53 etc
+drwxr-xr-x   3 root root  4096 Mar 29 08:43 home
+lrwxrwxrwx   1 root root     9 Apr 22  2024 lib64 -> usr/lib64
+drwxr-xr-x   2 root root  4096 Apr  8  2024 lib.usr-is-merged
+lrwxrwxrwx   1 root root     7 Apr 22  2024 lib -> usr/lib
+drwx------   2 root root 16384 Mar 29 08:15 lost+found
+drwxr-xr-x   3 root root  4096 May  8 10:30 media
+drwxr-xr-x   2 root root  4096 Aug 27  2024 mnt
+drwxr-xr-x   3 root root  4096 May  8 10:52 opt
+dr-xr-xr-x 292 root root     0 May  9 08:32 proc
+drwx------   5 root root  4096 Mar 29 08:43 root
+drwxr-xr-x  34 root root   900 May  9 08:33 run
+drwxr-xr-x   2 root root  4096 Mar 31  2024 sbin.usr-is-merged
+lrwxrwxrwx   1 root root     8 Apr 22  2024 sbin -> usr/sbin
+drwxr-xr-x  14 root root  4096 May  1 12:49 snap
+drwxr-xr-x   2 root root  4096 Aug 27  2024 srv
+dr-xr-xr-x  13 root root     0 May  9 08:47 sys
+drwxrwxrwt  17 root root  4096 May  9 08:38 tmp
+drwxr-xr-x  12 root root  4096 Aug 27  2024 usr
+drwxr-xr-x  14 root root  4096 Mar 29 08:42 var
+
+
+# Sort files by size (ascending order, smallest first)
+mukhamed@mukhamed:/$ ls -l | sort -k 5 -n
+dr-xr-xr-x  13 root root     0 May  9 08:47 sys
+dr-xr-xr-x 292 root root     0 May  9 08:32 proc
+total 88
+lrwxrwxrwx   1 root root     7 Apr 22  2024 bin -> usr/bin
+lrwxrwxrwx   1 root root     7 Apr 22  2024 lib -> usr/lib
+lrwxrwxrwx   1 root root     8 Apr 22  2024 sbin -> usr/sbin
+lrwxrwxrwx   1 root root     9 Apr 22  2024 lib64 -> usr/lib64
+drwxr-xr-x  34 root root   900 May  9 08:33 run
+drwx------   5 root root  4096 Mar 29 08:43 root
+drwxrwxrwt  17 root root  4096 May  9 08:38 tmp
+drwxr-xr-x  12 root root  4096 Aug 27  2024 usr
+drwxr-xr-x  14 root root  4096 Mar 29 08:42 var
+drwxr-xr-x  14 root root  4096 May  1 12:49 snap
+drwxr-xr-x   2 root root  4096 Apr  8  2024 lib.usr-is-merged
+drwxr-xr-x   2 root root  4096 Aug 27  2024 mnt
+drwxr-xr-x   2 root root  4096 Aug 27  2024 srv
+drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Mar 31  2024 sbin.usr-is-merged
+drwxr-xr-x   3 root root  4096 Mar 29 08:43 home
+drwxr-xr-x   3 root root  4096 May  8 10:30 media
+drwxr-xr-x   3 root root  4096 May  8 10:52 opt
+drwxr-xr-x   3 root root  4096 May  8 13:56 boot
+dr-xr-xr-x   2 root root  4096 Mar 29 08:12 cdrom
+drwxr-xr-x  19 root root  4280 May  9 08:33 dev
+drwxr-xr-x 140 root root 12288 May  8 10:53 etc
+drwx------   2 root root 16384 Mar 29 08:15 lost+found
+
+# Sort files by size (descending order, largest first)
+mukhamed@mukhamed:/$ ls -l | sort -k 5 -nr
+drwx------   2 root root 16384 Mar 29 08:15 lost+found
+drwxr-xr-x 140 root root 12288 May  8 10:53 etc
+drwxr-xr-x  19 root root  4280 May  9 08:33 dev
+dr-xr-xr-x   2 root root  4096 Mar 29 08:12 cdrom
+drwxr-xr-x   3 root root  4096 May  8 13:56 boot
+drwxr-xr-x   3 root root  4096 May  8 10:52 opt
+drwxr-xr-x   3 root root  4096 May  8 10:30 media
+drwxr-xr-x   3 root root  4096 Mar 29 08:43 home
+drwxr-xr-x   2 root root  4096 Mar 31  2024 sbin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Aug 27  2024 srv
+drwxr-xr-x   2 root root  4096 Aug 27  2024 mnt
+drwxr-xr-x   2 root root  4096 Apr  8  2024 lib.usr-is-merged
+drwxr-xr-x  14 root root  4096 May  1 12:49 snap
+drwxr-xr-x  14 root root  4096 Mar 29 08:42 var
+drwxr-xr-x  12 root root  4096 Aug 27  2024 usr
+drwxrwxrwt  17 root root  4096 May  9 08:38 tmp
+drwx------   5 root root  4096 Mar 29 08:43 root
+drwxr-xr-x  34 root root   900 May  9 08:33 run
+lrwxrwxrwx   1 root root     9 Apr 22  2024 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root     8 Apr 22  2024 sbin -> usr/sbin
+lrwxrwxrwx   1 root root     7 Apr 22  2024 lib -> usr/lib
+lrwxrwxrwx   1 root root     7 Apr 22  2024 bin -> usr/bin
+total 88
+dr-xr-xr-x 292 root root     0 May  9 08:32 proc
+dr-xr-xr-x  13 root root     0 May  9 08:47 sys
+
+5.5)
+
+mukhamed@mukhamed:/$ ls -l /usr/bin | tr -s ' ' | cut -d ' ' -f 5 | sort -n | uniq -d
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+35
+41
+47
+53
+215
+274
+350
+352
+1003
+1622
+2346
+4527
+5656
+8360
+14488
+14632
+14640
+14648
+14656
+14664
+14712
+14720
+14728
+14824
+18736
+18744
+18752
+18808
+18816
+18824
+18888
+18904
+22680
+22760
+22832
+22840
+22912
+22920
+22928
+22976
+22984
+23008
+23080
+23112
+23176
+23328
+23744
+26784
+26856
+26928
+26936
+26952
+27008
+27016
+27072
+27080
+27216
+27536
+31024
+31104
+31112
+31120
+31176
+31184
+31336
+31440
+31504
+31576
+35128
+35200
+35208
+35224
+35240
+35296
+35336
+35360
+39296
+39304
+39336
+39432
+39560
+43400
+43432
+43528
+44024
+45593
+47552
+47624
+48032
+51584
+51592
+51608
+51656
+51720
+55680
+55744
+55792
+55816
+59912
+59928
+63952
+67968
+68048
+68072
+76264
+88448
+96776
+96864
+142312
+178608
+1027128
+4019312
+
+5.6)
+
+# Compare a Single Source File with Its Object File
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cmp prog.c prog.o
+prog.c prog.o differ: byte 1, line 1
+
+# Compare All .c and .o Files in a Directory
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ for c_file in *.c; do
+    o_file="${c_file%.c}.o"
+    if [ -f "$o_file" ]; then
+        echo "Comparing $c_file and $o_file:"
+        cmp "$c_file" "$o_file" || echo "Files differ."
+    fi
+done
+Comparing prog.c and prog.o:
+prog.c prog.o differ: byte 1, line 1
+Files differ.
+
+# Check Only If Files Differ (Silent Mode)
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cmp -s prog.c prog.o && echo "Identical" || echo "Different"
+Different
+
+5.7)
+
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ diff -e prog.c my_open.c > eqv
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ ls
+eqv  file_name  file.name.c  file_name.c  labForBeginersLog.log  my_open  my_open.c  new_open  new_open.c  path  prog  prog.c  prog.o  renamed-file.txt  res
+mukhamed@mukhamed:~/OS/mukhamed_makhmoud_LabForBeginners$ cat eqv 
+4c
+    if (argc > 1) {
+        if (fopen(argv[1], "r") == NULL) {
+            printf("%s: неудача при попытке открыть файл %s\n", argv[0], argv[1]);
+        }
+        else {
+            printf("%s: файл %s открыт\n", argv[0], argv[1]);
+        }
+    }
+    else {
+        printf("открываемый файл не указан\n");
+    }
+    
+    return 0;
+.
+2c
+
+int main(int argc, char *argv[]) 
+.

@@ -1,0 +1,889 @@
+Мохамед Махмуд 3342
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date
+Пн 14 апр 2025 00:46:46 MSK
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && whoami
+Пн 14 апр 2025 00:47:19 MSK
+mukhamed
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && lscpu
+Пн 14 апр 2025 00:47:40 MSK
+Архитектура:               x86_64
+  CPU op-mode(s):          32-bit, 64-bit
+  Address sizes:           48 bits physical, 48 bits virtual
+  Порядок байт:            Little Endian
+CPU(s):                    4
+  On-line CPU(s) list:     0-3
+ID прроизводителя:         AuthenticAMD
+  Имя модели:              AMD Ryzen 5 5000H with Radeon Graphics
+    Семейство ЦПУ:         25
+    Модель:                68
+    Потоков на ядро:       1
+    Ядер на сокет:         4
+    Сокетов:               1
+    Степпинг:              1
+    BogoMIPS:              6587,63
+    Флаги:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext 
+                           fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 cx16 sse
+                           4_1 sse4_2 movbe popcnt aes rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch vmmcall
+                            fsgsbase bmi1 bmi2 rdseed adx clflushopt sha_ni arat
+Virtualization features:   
+  Разработчик гипервизора: KVM
+  Тип виртуализации:       полный
+Caches (sum of all):       
+  L1d:                     128 KiB (4 instances)
+  L1i:                     128 KiB (4 instances)
+  L2:                      2 MiB (4 instances)
+  L3:                      64 MiB (4 instances)
+NUMA:                      
+  NUMA node(s):            1
+  NUMA node0 CPU(s):       0-3
+Vulnerabilities:           
+  Gather data sampling:    Not affected
+  Itlb multihit:           Not affected
+  L1tf:                    Not affected
+  Mds:                     Not affected
+  Meltdown:                Not affected
+  Mmio stale data:         Not affected
+  Reg file data sampling:  Not affected
+  Retbleed:                Not affected
+  Spec rstack overflow:    Vulnerable: Safe RET, no microcode
+  Spec store bypass:       Not affected
+  Spectre v1:              Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:              Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                   Not affected
+  Tsx async abort:         Not affected
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && lshw | head -n 19
+Пн 14 апр 2025 00:52:39 MSK
+mukhamed-virtualbox
+    описание: Computer
+    разрядность: 64 bits
+    возможности: smp vsyscall32
+  *-core
+       описание: Motherboard
+       физический ID: 0
+     *-memory
+          описание: Системная память
+          физический ID: 0
+          размер: 4GiB
+     *-cpu
+          продукт: AMD Ryzen 5 5000H with Radeon Graphics
+          производитель: Advanced Micro Devices [AMD]
+          физический ID: 1
+          сведения о шине: cpu@0
+          версия: 25.68.1
+          разрядность: 64 bits
+          возможности: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 movbe popcnt aes rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch vmmcall fsgsbase bmi1 bmi2 rdseed adx clflushopt sha_ni arat
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && sudo dmidecode -s system-product-name
+Пн 14 апр 2025 00:55:00 MSK
+VirtualBox
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && uname -a
+Пн 14 апр 2025 00:55:37 MSK
+Linux mukhamed-virtualbox 6.11.0-19-generic #19-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 21:43:43 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+Выполнение работы:
+
+1)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && touch task1.txt
+Пн 14 апр 2025 01:20:14 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && cat task1.txt
+Пн 14 апр 2025 01:20:46 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ./task1.sh task1.txt
+Пн 14 апр 2025 01:27:34 MSK
+Results saved in 'task1.txt'.
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && cat task1.txt
+Пн 14 апр 2025 01:29:25 MSK
+-rw------- /swapfile
+brw-rw---- /loop0
+crw-r--r-- /autofs
+drwxr-xr-x /boot
+lrwxrwxrwx /usr/bin
+prw------- /dmeventd-client
+srw-rw-rw- /snapd-snap.socket
+
+2)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && touch test_file.txt
+Пн 14 апр 2025 01:40:35 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && ls
+Пн 14 апр 2025 01:40:37 MSK
+test_file.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && ln test_file.txt hard_link1.txt
+Пн 14 апр 2025 01:40:40 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && cd ..
+Пн 14 апр 2025 01:40:44 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ln 2/test_file.txt ./hard_link2.txt
+Пн 14 апр 2025 01:40:45 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ls -lRi
+Пн 14 апр 2025 01:40:50 MSK
+.:
+итого 20
+1097182 drwxrwxr-x 2 mukhamed mukhamed 4096 апр 14 01:46 2
+1097188 -rw-rw-r-- 3 mukhamed mukhamed    0 апр 14 01:46 hard_link2.txt
+1096574 -rw-rw-r-- 1 mukhamed mukhamed 5562 апр 14 01:50 report.log
+1097148 -rwxrwxrwx 1 mukhamed mukhamed  463 апр 14 01:27 task1.sh
+1097149 -rw-rw-r-- 1 mukhamed mukhamed  153 апр 14 01:27 task1.txt
+
+./2:
+итого 0
+1097188 -rw-rw-r-- 3 mukhamed mukhamed 0 апр 14 01:46 hard_link1.txt
+1097188 -rw-rw-r-- 3 mukhamed mukhamed 0 апр 14 01:46 test_file.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && touch output.txt
+Пн 14 апр 2025 01:40:53 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && touch output.txt
+Пн 14 апр 2025  2025 01:40:54 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && cat output.txt
+Пн 14 апр 2025  2025 01:40:55 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && ./task2.sh a/test_file.txt
+Пн 14 апр 2025  2025 01:41:00 MSK
+
+#Состояние файла output.txt до выполнения скрипта:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/2$ date && cat output.txt
+Пн 14 апр 2025  2025 01:41:01 MSK
+/home/mukhamed/os/mohamed_mahmoud_lb1/402995 hard_link2.txt
+/home/mukhamed/os/mohamed_mahmoud_lb1/2/402995 hard_link1.txt
+/home/mukhamed/os/mohamed_mahmoud_lb1/2/402995 test_file.txt
+
+
+3)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && touch file.txt
+Пн 14 апр 2025  2025 01:41:02 MSK
+
+#Создаём с помощью скрипта 1 жёсткую и 2 символьных ссылки на file.txt.
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3/directory$ date && ./create_links.sh
+Пн 14 апр 2025  2025 01:41:03 MSK
+Проверка созданных ссылок:
+итого 4
+-rwxrwxr-x 1 mukhamed mukhamed 536 мар 18 13:53 create_links.sh
+-rw-rw-r-- 2 mukhamed mukhamed   0 мар 18 14:24 file.txt
+lrwxrwxrwx 1 mukhamed mukhamed   8 мар 19 22:44 link_cp.txt -> file.txt
+-rw-rw-r-- 2 mukhamed mukhamed   0 мар 18 14:24 link_link.txt
+lrwxrwxrwx 1 mukhamed mukhamed   8 мар 19 22:44 link_ln.txt -> file.txt
+
+
+#Состояние файла file_links.txt до выполнения скрипта:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && touch file_links.txt
+Пн 14 апр 2025  2025 01:41:04 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && cat file_links.txt
+Пн 14 апр 2025  2025 01:41:05 MSK
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && ./task3.sh file.txt
+Пн 14 апр 2025  2025 01:41:07 MSK
+Results saved in ./file_links.txt
+Symbol links found: 2
+
+#Состояние файла file_links.txt после выполнения скрипта:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date &&  cat file_links.txt
+Пн 14 апр 2025  2025 01:41:10 MSK
+lrwxrwxrwx 1 mukhamed mukhamed   8 мар 19 22:44 link_cp.txt -> file.txt
+lrwxrwxrwx 1 mukhamed mukhamed   8 мар 19 22:44 link_ln.txt -> file.txt
+total 2
+
+
+4)
+#Состояние файла symb_links.txt до выполнения скрипта:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && touch file_links.txt
+Пн 14 апр 2025  2025 01:41:15 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/3$ date && cat file_links.txt
+Пн 14 апр 2025  2025 01:41:16 MSK
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/4$ date && ./task4.sh file.txt
+Пн 14 апр 2025  2025 01:42:00 MSK
+#Состояние файла symb_links.txt до выполнения скрипта:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/4$ date && cat symb_links.txt s
+Пн 14 апр 2025  2025 01:42:10 MSK
+Searching by find and stat:
+'/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_cp.txt' -> 'file.txt'
+'/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_ln.txt' -> 'file.txt'
+
+
+Searching by find and -lname:
+/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_cp.txt
+/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_ln.txt
+
+
+Searching by readlink in cycle:
+/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_cp.txt -> file.txt
+/home/mukhamed/os/mohamed_mahmoud_lb1/3/directory/link_ln.txt -> file.txt
+
+
+Searching by ls and grep:
+lrwxrwxrwx 1 mukhamed mukhamed    8 апр  20 00:10 link_cp.txt -> file.txt
+lrwxrwxrwx 1 mukhamed mukhamed    8 апр  20 00:10 link_ln.txt -> file.txt
+
+5)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && touch a.
+Пн 14 апр 2025  2025 01:43:00 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && mkdir b
+Пн 14 апр 2025  2025 01:43:01 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && cd b
+Пн 14 апр 2025  2025 01:43:01 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b$ date && touch c.txt
+Пн 14 апр 2025  2025 01:43:02 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b$ date && mkdir e
+Пн 14 апр 2025  2025 01:43:03 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b$ date && cd e/
+Пн 14 апр 2025  2025 01:43:04 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b/e$ date && touch f.txt
+Пн 14 апр 2025  2025 01:43:06 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b/e$ date && cd ..
+Пн 14 апр 2025  2025 01:43:07 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5/b$ date && cd ..
+Пн 14 апр 2025  2025 01:43:09 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && ls -lRi
+Пн 14 апр 2025  2025 01:43:11 MSK
+.:
+итого 8
+524627 -rw-rw-r-- 1 mukhamed mukhamed    0  апр  20 00:31 a.txt
+524628 drwxrwxr-x 3 mukhamed mukhamed 4096  апр  20 00:32 b
+524388 -rwxrwxr-x 1 mukhamed mukhamed 10220 апр  20 00:31 find.sh
+
+./b:
+итого 4
+524630 -rw-rw-r-- 1 mukhamed mukhamed    0 апр  20 00:32 c.txt
+524631 drwxrwxr-x 2 mukhamed mukhamed 4096 апр  20 00:32 e
+
+./b/e:
+итого 0
+524632 -rw-rw-r-- 1 mukhamed mukhamed 0 апр  20 00:32 f.txt
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -name "a.txt"
+./a.txt
+Пн 14 апр 2025  2025 01:43:15 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -name "*.txt"
+Пн 14 апр 2025  2025 01:43:20 MSK
+./a.txt
+./b/e/f.txt
+./b/c.txt
+./output.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -type d
+Пн 14 апр 2025  2025 01:43:21 MSK
+.
+./b
+./b/e
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -mindepth 2
+Пн 14 апр 2025  2025 01:43:30 MSK
+./b/e
+./b/e/f.txt
+./b/c.txt
+
+#Найти все файлы с расширением .txt, измененные за последние 30 дней, и вывести их размер:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -type f -name
+Пн 14 апр 2025  2025 01:43:31 MSK
+"*.txt" -mtime -30 -exec ls -lh {} \;
+-rw-rw-r-- 1 mukhamed mukhamed 0   апр  20 00:31 ./a.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0   апр  20 00:32 ./b/e/f.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0   апр  20 00:32 ./b/c.txt
+-rw-rw-r-- 1 mukhamed mukhamed 984 апр  20 00:35 ./output.txt
+
+#Найти все файлы больше 10 МБ и удалить их:
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -type f -size +10M -exec rm {} \;
+Пн 14 апр 2025  2025 01:43:32 MSK
+
+#Поиск всех файлов с правами 777 и изменение прав на 644:"
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/5$ date && find . -type f -perm 777 -exec chmod 644 {} \;
+Пн 14 апр 2025  2025 01:43:33 MSK
+
+
+6)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && ls -R
+Пн 14 апр 2025  2025 01:43:34 MSK
+.:
+a  task6.sh
+
+./a:
+p.txt  star.jpg  star.psd
+
+#Проведён анализ заголовкой .jpg .psd .txt файлов, для директорий утилиты не работают
+
+.jpg
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && ./task6.sh a/star.jpg
+Пн 14 апр 2025  2025 01:43:35 MSK
+Analyzing a/star.jpg via od:
+000000 ff d8 ff e1 1b 9f 45 78 69 66 00 00 4d 4d 00 2a  >......Exif..MM.*<
+000010 00 00 00 08 00 0e 01 00 00 03 00 00 00 01 13 88  >................<
+000020 00 00 01 01 00 03 00 00 00 01 0f a0 00 00 01 02  >................<
+000030 00 03 00 00 00 03 00 00 00 b6 01 06 00 03 00 00  >................<
+000040
+----------------------------------------
+Analyzing a/star.jpg via hexdump:
+00000000  ff d8 ff e1 1b 9f 45 78  69 66 00 00 4d 4d 00 2a  |......Exif..MM.*|
+00000010  00 00 00 08 00 0e 01 00  00 03 00 00 00 01 13 88  |................|
+00000020  00 00 01 01 00 03 00 00  00 01 0f a0 00 00 01 02  |................|
+00000030  00 03 00 00 00 03 00 00  00 b6 01 06 00 03 00 00  |................|
+00000040
+----------------------------------------
+
+#.psd
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && ./task6.sh a/star.psd
+Пн 14 апр 2025  2025 01:43:36 MSK
+Analyzing a/star.psd via od:
+000000 38 42 50 53 00 01 00 00 00 00 00 00 00 03 00 00  >8BPS............<
+000010 0f a0 00 00 13 88 00 08 00 03 00 00 00 00 00 00  >................<
+000020 78 60 38 42 49 4d 04 04 00 00 00 00 02 ca 1c 01  >x`8BIM..........<
+000030 5a 00 03 1b 25 47 1c 02 00 00 02 00 00 1c 02 78  >Z...%G.........x<
+000040
+----------------------------------------
+Analyzing a/star.psd via hexdump:
+00000000  38 42 50 53 00 01 00 00  00 00 00 00 00 03 00 00  |8BPS............|
+00000010  0f a0 00 00 13 88 00 08  00 03 00 00 00 00 00 00  |................|
+00000020  78 60 38 42 49 4d 04 04  00 00 00 00 02 ca 1c 01  |x`8BIM..........|
+00000030  5a 00 03 1b 25 47 1c 02  00 00 02 00 00 1c 02 78  |Z...%G.........x|
+00000040
+----------------------------------------
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && echo << aaaaaaaabbbbbbbbccccccdddddddddd a/p.txt
+Пн 14 апр 2025  2025 01:43:38 MSK
+#.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && ./task6.sh a/p.txt
+Пн 14 апр 2025  2025 01:43:38 MSK
+Analyzing a/p.txt via od:
+000000 61 61 61 61 61 61 61 61 62 62 62 62 62 62 62 62  >aaaaaaaabbbbbbbb<
+000010 63 63 63 63 63 63 64 64 64 64 64 64 64 64 64 64  >ccccccdddddddddd<
+000020
+----------------------------------------
+Analyzing a/p.txt via hexdump:
+00000000  61 61 61 61 61 61 61 61  62 62 62 62 62 62 62 62  |aaaaaaaabbbbbbbb|
+00000010  63 63 63 63 63 63 64 64  64 64 64 64 64 64 64 64  |ccccccdddddddddd|
+00000020
+----------------------------------------
+
+#Пример для директории
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/6$ date && ./task6.sh a
+Пн 14 апр 2025  2025 01:43:41 MSK
+Analyzing a с помощью via
+od: a: Это каталог
+000000
+----------------------------------------
+Analyzing a с помощью via
+hexdump: a: Это каталог
+----------------------------------------
+
+7)
+#Максимальное количество файлов в каталоге это количество свободных inode
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/7$ date && df -i dir
+Пн 14 апр 2025  2025 01:43:50 MSK
+Файл.система    Iнодов IИспользовано IСвободно IИспользовано% Cмонтировано в
+/dev/sda1      1310720        298433   1012287            23% /
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/7$ date && ./task7.sh
+Пн 14 апр 2025  2025 01:44:00 MSK
+Начальный размер директории: 4096 байт
+Размер после создания 50 файлов: 208896 байт
+Размер после удаления 25 файлов: 106496 байт
+Размер после добавления 30 файлов: 229376 байт
+Размер после удаления 10 файлов: 188416 байт
+Размер после добавления 100 файлов: 598016 байт
+Размер после удаления всех файлов: 4096 байт
+
+8)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ls -l /etc/passwd
+Пн 14 апр 2025  2025 01:44:02 MSK
+-rw-r--r-- 1 root root 2588 апр 15 10:33 /etc/passwd
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && sed -n '1p;2p' /etc/passwd
+Пн 14 апр 2025  2025 01:44:04 MSK
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ls -l /etc/shadow
+Пн 14 апр 2025  2025 01:44:05 MSK
+-rw-r----- 1 root shadow 1197 апр 15 10:33 /etc/shadow
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && sudo cat /etc/shadow | head -n 4
+Пн 14 апр 2025  2025 01:44:07 MSK
+root:!:20136:0:99999:7:::
+daemon:*:20003:0:99999:7:::
+bin:*:20003:0:99999:7:::
+sys:*:20003:0:99999:7:::
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && ls -l /usr/bin/passwd
+Пн 14 апр 2025  2025 01:44:10 MSK
+-rwsr-xr-x 1 root root 93608 авг 13  2024 /usr/bin/passwd
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && sudo /usr/bin/passwd
+Пн 14 апр 2025  2025 01:44:12 MSK
+Новый пароль:
+Изменение пароля отменено.
+passwd: Ошибка при операциях с маркером проверки подлинности
+passwd: пароль не изменён
+
+
+9.1
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && mkdir test_dir
+Пн 14 апр 2025  2025 01:44:15 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && cd test_dir/
+Пн 14 апр 2025  2025 01:44:16 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && touch file1.txt
+Пн 14 апр 2025  2025 01:44:17 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && touch file2.txt
+Пн 14 апр 2025  2025 01:44:18 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:20 MSK
+итого 0
+-rw-rw-r-- 1 mukhamed mukhamed 0 апр 15 11:07 file1.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod u+x
+file1.txt
+Пн 14 апр 2025  2025 01:44:21 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:22 MSK
+итого 0
+-rwxrw-r-- 1 mukhamed mukhamed 0 апр 15 11:07 file1.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+
+#Запрещаем запись всем кроме владельца
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod go-w
+file2.txt
+Пн 14 апр 2025  2025 01:44:23 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:24 MSK
+итого 0
+-rwxrw-r-- 1 mukhamed mukhamed 0 апр 15 11:07 file1.txt
+-rw-r--r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && touch file3.txt
+Пн 14 апр 2025  2025 01:44:25 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:27 MSK
+итого 0
+-rwxrw-r-- 1 mukhamed mukhamed 0 апр 15 11:07 file1.txt
+-rw-r--r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0 апр 15 11:12 file3.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod 755
+file3.txt
+Пн 14 апр 2025  2025 01:44:26 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:40 MSK
+итого 0
+-rwxrw-r-- 1 mukhamed mukhamed 0 апр 15 11:07 file1.txt
+-rw-r--r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+-rwxr-xr-x 1 mukhamed mukhamed 0 апр 15 11:12 file3.txt
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo useradd newuser
+Пн 14 апр 2025  2025 01:44:41 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chown newuser file1.txt
+Пн 14 апр 2025  2025 01:44:43 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo groupadd newgroup
+Пн 14 апр 2025  2025 01:44:44 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chown :newgroup file3.txt
+Пн 14 апр 2025  2025 01:44:45 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date &&ls -l
+Пн 14 апр 2025  2025 01:44:46 MSK
+итого 0
+-rwxrw-r-- 1 newuser  mukhamed 0 апр 15 11:07 file1.txt
+-rw-r--r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+-rwxr-xr-x 1 mukhamed newgroup 0 апр 15 11:12 file3.txt
+
+9.2
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod u+s file2.txt
+Пн 14 апр 2025  2025 01:44:47 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:44:48 MSK
+итого 0
+-rwxrw-r-- 1 newuser  mukhamed 0 апр 15 11:07 file1.txt
+-rwSr--r-- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+-rwxr-xr-x 1 mukhamed newgroup 0 апр 15 11:12 file3.txt
+
+9.3
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod 640 file2.txt
+Пн 14 апр 2025  2025 01:45:00 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:45:01 MSK
+итого 0
+-rwxrw-r-- 1 newuser  mukhamed 0 апр 15 11:07 file1.txt
+-rw-r----- 1 mukhamed mukhamed 0 апр 15 11:08 file2.txt
+-rwxr-xr-x 1 mukhamed newgroup 0 апр 15 11:12 file3.txt
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chown newuser:newgroup file2.txt
+Пн 14 апр 2025  2025 01:45:04 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:45:05 MSK
+итого 0
+-rwxrw-r-- 1 newuser  mukhamed 0 апр 15 11:07 file1.txt
+-rw-r----- 1 newuser  newgroup 0 апр 15 11:08 file2.txt
+-rwxr-xr-x 1 mukhamed newgroup 0 апр 15 11:12 file3.txt
+
+
+9.4
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && echo 1111 >> file3.txt
+Пн 14 апр 2025  2025 01:45:06 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 400 file3.txt
+Пн 14 апр 2025  2025 01:45:07 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 400 file3.txt
+Пн 14 апр 2025  2025 01:45:10 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 400 file3.txt
+Пн 14 апр 2025  2025 01:45:11 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && cat file3.txt
+1111mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 000 file3.txt
+Пн 14 апр 2025  2025 01:45:12 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && cat file3.txt
+Пн 14 апр 2025  2025 01:45:13 MSK
+cat: file3.txt: Отказано в доступе
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 200 file3.txt
+Пн 14 апр 2025  2025 01:45:15 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && echo 2222 >> file3.txt
+Пн 14 апр 2025  2025 01:45:17 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && sudo chmod 000 file3.txt
+Пн 14 апр 2025  2025 01:45:18 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && echo 2222 >> file3.txt
+Пн 14 апр 2025  2025 01:45:20 MSK
+bash: file3.txt: Отказано в доступе
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && touch scr.sh
+Пн 14 апр 2025  2025 01:45:21 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ls -l
+Пн 14 апр 2025  2025 01:45:23 MSK
+итого 4
+-rwxrw-r-- 1 newuser  mukhamed 0 апр 15 11:07 file1.txt
+-rw-r----- 1 newuser  newgroup 0 апр 15 11:08 file2.txt
+---------- 1 mukhamed newgroup 9 апр 15 11:29 file3.txt
+-rw-rw-r-- 1 mukhamed mukhamed 0 апр 15 11:29 scr.sh
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod u+x scr.sh
+Пн 14 апр 2025  2025 01:45:24 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ./scr.sh
+Пн 14 апр 2025  2025 01:45:25 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && chmod u-x scr.sh
+Пн 14 апр 2025  2025 01:45:26 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9/test_dir$ date && ./scr.sh
+Пн 14 апр 2025  2025 01:45:27 MSK
+bash: ./scr.sh: Отказано в доступе
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && chmod 000 test_dir/
+Пн 14 апр 2025  2025 01:45:30 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && ls -l
+Пн 14 апр 2025  2025 01:45:31 MSK
+итого 4
+d--------- 2 mukhamed mukhamed 4096 апр 15 11:29 test_dir
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && echo 2222 >> test_dir/file3.txt
+Пн 14 апр 2025  2025 01:45:33 MSK
+bash: test_dir/file3.txt: Отказано в доступе
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && cat test_dir/file3.txt
+Пн 14 апр 2025  2025 01:45:37 MSK
+cat: test_dir/file3.txt: Отказано в доступе
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/9$ date && ./test_dir/scr.sh
+Пн 14 апр 2025  2025 01:45:40 MSK
+bash: ./test_dir/scr.sh: Отказано в доступе
+
+10)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && touch secret.txt
+Пн 14 апр 2025  2025 01:57:05 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && echo secret data >> secret.txt
+Пн 14 апр 2025  2025 01:57:06 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && chmod 000 secret.txt
+Пн 14 апр 2025  2025 01:57:08 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && ls -l secret.txt
+Пн 14 апр 2025  2025 01:57:10 MSK
+---------- 1 1001 1003 12 мар 19 23:34 secret.txt
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo useradd -m user1
+Пн 14 апр 2025  2025 01:57:12 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo groupadd testgroup
+Пн 14 апр 2025  2025 01:57:13 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo usermod -aG
+testgroup user1
+Пн 14 апр 2025  2025 01:57:15 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && gcc -o gateway gateway.c
+Пн 14 апр 2025  2025 01:57:18 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo chmod u+s gateway
+Пн 14 апр 2025  2025 01:57:21 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo chown root:root gateway
+Пн 14 апр 2025  2025 01:57:24 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo -u user1 ./gateway secret.txt
+Пн 14 апр 2025  2025 01:57:26 MSK
+Error: Permission denied
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo chown root:root gateway
+Пн 14 апр 2025  2025 01:57:27 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo chmod u+s gateway
+Пн 14 апр 2025  2025 01:57:29 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && sudo -u user1 ./gateway secret.txt
+Пн 14 апр 2025  2025 01:57:31 MSK
+Secret data
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && cat secret.txt
+Пн 14 апр 2025  2025 01:57:35 MSK
+cat: secret.txt: Отказано в доступе
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/10$ date && ./task10.sh
+Пн 14 апр 2025  2025 01:57:37 MSK
+Проверка доступа для user1 (входит в группу testgroup):
+Пользователь: user1
+Secret data
+Пользователь user1 получил доступ к файлу.
+-----------------------------
+Проверка доступа для user2 (входит в группу testgroup):
+Пользователь: user2
+Secret data
+Пользователь user2 получил доступ к файлу.
+-----------------------------
+Проверка доступа для user3 (не входит в группу testgroup):
+Пользователь: user3
+Secret data
+Пользователь user3 получил доступ к файлу.
+-----------------------------
+
+11.1)
+
+mukhamed@mukhamed-virtualbox:~$ date && df -h
+Пн 14 апр 2025  2025 01:57:40 MSK
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,4M  391M            1% /run
+/dev/sda1         20G          12G  7,1G           63% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-journald.service
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-udev-load-credentials.service
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-tmpfiles-setup-dev-early.service
+tmpfs            2,0G         4,0K  2,0G            1% /tmp
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-sysctl.service
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-tmpfiles-setup-dev.service
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-tmpfiles-setup.service
+tmpfs            1,0M            0  1,0M            0% /run/credentials/systemd-resolved.service
+tmpfs            392M          96K  392M            1% /run/user/1000
+
+mukhamed@mukhamed-virtualbox:~$ date && cat /etc/fstab
+Пн 14 апр 2025  2025 01:57:41 MSK
+
+# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
+UUID=63ca8a34-1be5-4fcd-b581-610681a842c9 /              ext4    defaults   0 1
+/swapfile                                 swap           swap    defaults   0 0
+
+11.2)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && findmnt
+Пн 14 апр 2025  2025 01:57:47 MSK
+TARGET          SOURCE      FSTYPE   OPTIONS
+/               /dev/sda1   ext4     rw,relatime
+├─/sys          sysfs       sysfs    rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/kernel/security
+│ │             securityfs  security rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/fs/cgroup
+│ │             cgroup2     cgroup2  rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot
+│ ├─/sys/fs/pstore
+│ │             pstore      pstore   rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/fs/bpf bpf         bpf      rw,nosuid,nodev,noexec,relatime,mode=700
+│ ├─/sys/kernel/debug
+│ │             none        debugfs  rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/kernel/tracing
+│ │             tracefs     tracefs  rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/fs/fuse/connections
+│ │             fusectl     fusectl  rw,nosuid,nodev,noexec,relatime
+│ └─/sys/kernel/config
+│               configfs    configfs rw,nosuid,nodev,noexec,relatime
+├─/proc         proc        proc     rw,nosuid,nodev,noexec,relatime
+│ └─/proc/sys/fs/binfmt_misc
+│   │           systemd-1   autofs   rw,relatime,fd=34,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=
+│   └─/proc/sys/fs/binfmt_misc
+│               binfmt_misc binfmt_m rw,nosuid,nodev,noexec,relatime
+├─/dev          udev        devtmpfs rw,nosuid,relatime,size=1963352k,nr_inodes=490838,mode=755,inode64
+│ ├─/dev/pts    devpts      devpts   rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000
+│ ├─/dev/shm    tmpfs       tmpfs    rw,nosuid,nodev,inode64
+│ ├─/dev/mqueue mqueue      mqueue   rw,nosuid,nodev,noexec,relatime
+│ └─/dev/hugepages
+│               hugetlbfs   hugetlbf rw,nosuid,nodev,relatime,pagesize=2M
+├─/run          tmpfs       tmpfs    rw,nosuid,nodev,noexec,relatime,size=400872k,mode=755,inode64
+│ ├─/run/lock   tmpfs       tmpfs    rw,nosuid,nodev,noexec,relatime,size=5120k,inode64
+│ ├─/run/credentials/systemd-journald.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ ├─/run/credentials/systemd-udev-load-credentials.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ ├─/run/credentials/systemd-tmpfiles-setup-dev-early.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ ├─/run/credentials/systemd-sysctl.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ ├─/run/credentials/systemd-tmpfiles-setup-dev.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ ├─/run/snapd/ns
+│ │ │           tmpfs[/snapd/ns]
+│ │ │                       tmpfs    rw,nosuid,nodev,noexec,relatime,size=400872k,mode=755,inode64
+│ │ └─/run/snapd/ns/firefox.mnt
+│ │             nsfs[mnt:[4026532308]]
+│ │                         nsfs     rw
+│ ├─/run/user/1000
+│ │ │           tmpfs       tmpfs    rw,nosuid,nodev,relatime,size=400868k,nr_inodes=100217,mode=700,uid=1000,
+│ │ └─/run/user/1000/doc
+│ │             portal      fuse.por rw,nosuid,nodev,relatime,user_id=1000,group_id=1000
+│ ├─/run/credentials/systemd-tmpfiles-setup.service
+│ │             tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+│ └─/run/credentials/systemd-resolved.service
+│               tmpfs       tmpfs    ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mod
+├─/tmp          tmpfs       tmpfs    rw,nosuid,nodev,size=2004360k,nr_inodes=1048576,inode64
+├─/snap/core22/1748
+│               /dev/loop1  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/core22/1621
+│               /dev/loop2  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/firefox/5751
+│               /dev/loop0  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/bare/5  /dev/loop3  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/firmware-updater/127
+│               /dev/loop4  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/gnome-42-2204/176
+│               /dev/loop7  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/firmware-updater/167
+│               /dev/loop5  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/firefox/5783
+│               /dev/loop6  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/icon-theme-breeze/3
+│               /dev/loop9  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/gtk-theme-breeze/2
+│               /dev/loop8  squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/gtk-theme-breeze/5
+│               /dev/loop10 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/gtk-common-themes/1536
+│               /dev/loop12 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/gtk-common-themes/1535
+│               /dev/loop11 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/icon-theme-breeze/5
+│               /dev/loop13 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/snapd/23545
+│               /dev/loop15 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/snapd/21759
+│               /dev/loop14 squashfs ro,nodev,relatime,errors=continue,threads=single
+├─/snap/thunderbird/644
+│               /dev/loop16 squashfs ro,nodev,relatime,errors=continue,threads=single
+└─/snap/thunderbird/663
+                /dev/loop17 squashfs ro,nodev,relatime,errors=continue,threads=single
+
+#без флешки
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/11$ date && mount > before.txt
+Пн 14 апр 2025  2025 01:58:00 MSK
+
+#подключаем флешку
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/11$ date && mount > after.txt
+Пн 14 апр 2025  2025 01:59:05 MSK
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/11$ date && diff before.txt after.txt
+51a52
+Пн 14 апр 2025  2025 01:59:10 MSK
+> /dev/sdb1 on /media/mukhamed/UBUNTU 22_0 type vfat (rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro,uhelper=udisks2)
+
+mukhamed@mukhamed-virtualbox:~/os_repo/os-2025-3343$ date && sudo mkdir /mnt/usb
+Пн 14 апр 2025  2025 01:59:20 MSK
+mukhamed@mukhamed-virtualbox:~/os_repo/os-2025-3343$ date && sudo mount /dev/sdb1 /mnt/usb
+Пн 14 апр 2025  2025 01:59:21 MSK
+
+mukhamed@mukhamed-virtualbox:~/os_repo/os-2025-3343$ date && cat /etc/mtab | grep /dev/sdb1
+Пн 14 апр 2025  2025 01:59:22 MSK
+/dev/sdb1 /media/mukhamed/UBUNTU\04022_0 vfat rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro 0 0
+/dev/sdb1 /mnt/usb vfat rw,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro 0 0
+
+11.3)
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/11$ date && ./search_path.sh
+Пн 14 апр 2025  2025 01:59:05 MSK
+
+Поиск самого глубокого пути в системе...
+Самый глубокий путь: 15 /home/mukhamed/snap/firefox/common/.mozilla/firefox/fwuqh1ar.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cgoogle.com%29/cache/morgue/228/{64da87c7-9d60-4279-8a12-d22a0f8b50e4}.final
+
+Создание папки с вложенностью 17 уровней...
+Поиск самого глубокого пути в системе...
+
+Самый глубокий путь: 22 /home/mukhamed/os/mohamed_mahmoud_lb1/11/folder1/folder2/folder3/folder4/folder5/folder6/folder7/folder8/folder9/folder10/folder11/folder12/folder13/folder14/folder15/folder16/folder17
+
+Поиск самого длинного пути в системе...
+Самый длинный путь: 218 /home/mukhamed/snap/firefox/common/.mozilla/firefox/fwuqh1ar.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cfreepik.com%29/cache/morgue/200/{ef8e10d4-7328-4096-912a-0d40a68114c8}.final
+Удаление папки...
+Папка удалена.
+
+mukhamed@mukhamed-virtualbox:~$ date && cat /usr/include/linux/limits.h
+Пн 14 апр 2025  2025 02:00:18 MSK
+/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
+#ifndef _LINUX_LIMITS_H
+#define _LINUX_LIMITS_H
+
+#define NR_OPEN         1024
+
+#define NGROUPS_MAX    65536    /* supplemental group IDs are available */
+#define ARG_MAX       131072    /* # bytes of args + environ for exec() */
+#define LINK_MAX         127    /* # links a file may have */
+#define MAX_CANON        255    /* size of the canonical input queue */
+#define MAX_INPUT        255    /* size of the type-ahead buffer */
+#define NAME_MAX         255    /* # chars in a file name */
+#define PATH_MAX        4096    /* # chars in a path name including nul */
+#define PIPE_BUF        4096    /* # bytes in atomic write to a pipe */
+#define XATTR_NAME_MAX   255    /* # chars in an extended attribute name */
+#define XATTR_SIZE_MAX 65536    /* size of an extended attribute value (64k) */
+#define XATTR_LIST_MAX 65536    /* size of extended attribute namelist (64k) */
+
+#define RTSIG_MAX         32
+
+#endif
+
+12.1)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && touch file.c
+Пн 14 апр 2025  2025 02:00:20 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && gcc file.c
+Пн 14 апр 2025  2025 02:00:21 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && file a.out
+Пн 14 апр 2025  2025 02:00:23 MSK
+a.out: data
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && hexdump -n 10 a.out
+Пн 14 апр 2025  2025 02:00:25 MSK
+0000000 457f 464c 0102 0001 0000
+000000a
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && hexdump -n 10 -C a.out
+Пн 14 апр 2025  2025 02:00:27 MSK
+00000000  7f 45 4c 46 02 01 01 00  00 00                    |.ELF......|
+0000000a
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1$ date && cat /usr/share/mime/magic | head -n 20
+Пн 14 апр 2025  2025 02:00:30 MSK
+MIME-Magic
+[90:application/vnd.stardivision.writer]
+>2089=
+StarWriter
+[90:application/x-docbook+xml]
+>0=<?xml
+1>0=-//OASIS//DTD DocBook XML+101
+1>0=-//KDE//DTD DocBook XML+101
+[90:application/x-eris-link+cbor]
+>0=     �����XB
+[90:image/x-eps]
+>0=%!
+1>15=EPS
+>0=%!
+1>16=EPS
+>0=����
+[80:application/prs.plucker]
+>60DataPlkr
+[80:application/schema+json]
+>0={
+
+
+12.2)
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date &&  file -b file.c
+Пн 14 апр 2025  2025 02:00:34 MSK
+C source, ASCII text
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date &&  file -n file.c
+Пн 14 апр 2025  2025 02:00:38 MSK
+file.c: C source, ASCII text
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && file -c file.c
+Пн 14 апр 2025  2025 02:00:50 MSK
+cont    offset  type    opcode  mask    value   desc
+
+12.3)
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && touch file.mtype
+Пн 14 апр 2025  2025 02:00:54 MSK
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && echo MYTYPE01 file content >> file.mtype
+Пн 14 апр 2025  2025 02:00:55 MSK
+
+mukhamed@mukhamed-virtualbox:/usr/share/misc$ date && echo '0 string MYTYPE01 My Custom File Type' | sudo tee -a /usr/share/misc/magic
+Пн 14 апр 2025  2025 02:00:58 MSK
+0 string MYTYPE01 My Custom File Type
+
+mukhamed@mukhamed-virtualbox:/usr/share/misc$ date && cat magic
+Пн 14 апр 2025  2025 02:00:59 MSK
+0 string MYTYPE01 My Custom File Type
+
+mukhamed@mukhamed-virtualbox:/usr/share/misc$ date && sudo file -C -m /usr/share/misc/magic
+Пн 14 апр 2025  2025 02:01:03 MSK
+
+mukhamed@mukhamed-virtualbox:~/os/mohamed_mahmoud_lb1/12$ date && file file.mtype
+Пн 14 апр 2025  2025 02:01:05 MSK
+file.mtype: My Custom File Type

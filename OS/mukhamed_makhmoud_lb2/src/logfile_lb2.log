@@ -1,0 +1,2033 @@
+Дата: 2025-04-18 02:43:42
+ФИО: Мохамед Махмуд
+Группа: 3342
+
+================ Информация о системе =================
+
+Пользователь: saico
+
+Описание аппаратуры:
+Архитектура:               x86_64
+  CPU op-mode(s):          32-bit, 64-bit
+  Address sizes:           48 bits physical, 48 bits virtual
+  Порядок байт:            Little Endian
+CPU(s):                    4
+  On-line CPU(s) list:     0-3
+ID прроизводителя:         AuthenticAMD
+  Имя модели:              AMD Ryzen 5 5000H with Radeon Graphics
+    Семейство ЦПУ:         25
+    Модель:                68
+    Потоков на ядро:       1
+    Ядер на сокет:         4
+    Сокетов:               1
+    Степпинг:              1
+    BogoMIPS:              6587,63
+ Флаги:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext 
+                           fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 cx16 sse
+                           4_1 sse4_2 movbe popcnt aes rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch vmmcall
+                            fsgsbase bmi1 bmi2 rdseed adx clflushopt sha_ni arat
+Virtualization features:   
+  Разработчик гипервизора: KVM
+  Тип виртуализации:       полный
+Caches (sum of all):       
+  L1d:                     128 KiB (4 instances)
+  L1i:                     128 KiB (4 instances)
+  L2:                      2 MiB (4 instances)
+  L3:                      64 MiB (4 instances)
+NUMA:                      
+  NUMA node(s):            1
+  NUMA node0 CPU(s):       0-3
+Vulnerabilities:           
+  Gather data sampling:    Not affected
+  Itlb multihit:           Not affected
+  L1tf:                    Not affected
+  Mds:                     Not affected
+  Meltdown:                Not affected
+  Mmio stale data:         Not affected
+  Reg file data sampling:  Not affected
+  Retbleed:                Not affected
+  Spec rstack overflow:    Vulnerable: Safe RET, no microcode
+  Spec store bypass:       Not affected
+  Spectre v1:              Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:              Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                   Not affected
+  Tsx async abort:         Not affected
+
+Описание ОС:
+Linux saico-MDF-XX 6.8.0-57-generic #59~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Mar 19 17:07:41 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+Использование памяти:
+               total        used        free      shared  buff/cache   available
+Память:       15Gi       4,5Gi       4,3Gi       735Mi       6,6Gi       9,8Gi
+Подкачка:      2,0Gi          0B       2,0Gi
+
+Дисковое пространство:
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            1,6G         2,8M  1,6G            1% /run
+/dev/nvme0n1p2   468G          54G  391G           12% /
+tmpfs            7,7G          80M  7,6G            2% /dev/shm
+tmpfs            5,0M         4,0K  5,0M            1% /run/lock
+efivarfs         268K         181K   83K           69% /sys/firmware/efi/efivars
+tmpfs            7,7G            0  7,7G            0% /run/qemu
+/dev/nvme0n1p1   511M          18M  494M            4% /boot/efi
+tmpfs            1,6G         172K  1,6G            1% /run/user/1000
+
+================ Лабораторная работа =================
+Script started on 2025-04-18 02:50:38+03:00 [TERM="dumb" TTY="/dev/pts/0" COLUMNS="106" LINES="22"]
+======================ЗАДАНИЕ 1======================
+
+------------------------- ЗАДАНИЕ 1.1 -------------------------
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 1/1./1.1.sh 
+Пт 18 апр 2025 02:50:48 MSK
+[sudo] пароль для saico: 
+Текущий список фоновых процессов: 
+[1]  180506 Запущен          sudo find / -type d > /dev/null 2> /dev/null &
+[2]- 180507 Запущен          top -b > /dev/null &
+[3]+ 180508 Запущен          sleep 10 &
+[2]-  Запущен          top -b > /dev/null &
+
+Второй фоновый процесс текущей оболочки был завершен
+1/./1.1.sh: строка 33: 180507 Убито              top -b > /dev/null
+
+Текущий список фоновых процессов: 
+[1]- 180506 Запущен          sudo find / -type d > /dev/null 2> /dev/null &
+[3]+ 180508 Запущен          sleep 10 &
+
+Вывод 2ого процесса в активный: 
+sudo find / -type d > /dev/null 2> /dev/null
+
+Текущий список фоновых процессов: 
+[3]+ 180508 Запущен          sleep 10 &
+
+Задание 3 успешно выполненно.
+
+Скрипт завершен.
+
+------------------------- ЗАДАНИЕ 1.2 -------------------------
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && nohup ping google.com &
+[1] 180883
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ Пт 18 апр 2025 02:51:14 MSK
+nohup: ввод игнорируется, вывод добавляется в 'nohup.out'
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && ps aux | grep ping
+Пт 18 апр 2025 02:51:32 MSK
+saico      2682  0.0  0.0 312700  7936 ?        Ssl  апр17   0:00 /usr/libexec/gsd-housekeeping
+saico    180885  0.0  0.0  10352  2816 pts/4    S    02:51   0:00 ping google.com
+saico    181195  0.0  0.0   6592  2432 pts/4    R+   02:51   0:00 grep --color=auto ping
+
+# Процесс сохраняется после перезагрузки терминала
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && ps aux | grep ping
+Пт 18 апр 2025 02:51:44 MSK
+saico      2682  0.0  0.0 312700  7936 ?        Ssl  апр17   0:00 /usr/libexec/gsd-housekeeping
+saico    180885  0.0  0.0  10352  2816 pts/4    S    02:51   0:00 ping google.com
+saico    181367  0.0  0.0   6592  2432 pts/4    S+   02:51   0:00 grep --color=auto ping
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && kill 180885
+Пт 18 апр 2025 02:51:52 MSK
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ Завершено
+
+------------------------- ЗАДАНИЕ 1.3 -------------------------
+
+Пт 18 апр 2025 02:52:20 MSK
+Минимальный UID: 0
+Максимальный UID: 65534
+
+Минимально возможный PID: 1
+Максимально возможный PID: 4194304
+
+Минимальный действующий PID: 1
+Максимальный действующий PID: 181812
+
+Информация о процессе с мин. текущем PID: 
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 апр17 ?     00:00:02 /sbin/init splash
+
+Информация о процессе с макс. текущем PID: 
+UID          PID    PPID  C STIME TTY          TIME CMD
+saico    181812  180350  0 02:52 pts/4    00:00:00 /bin/bash 1/./1.3.sh
+
+------------------------- ЗАДАНИЕ 1.4 -------------------------
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 1/1.4.sh 
+Пт 18 апр 2025 02:52:32 MSK
+Примеры системных процессов: 
+
+Процесс 'systemd/init': инициализирует систему и запускает другие процессы:
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S     0       1       0  0  80   0 - 41755 -      ?        00:00:02 systemd
+
+Процесс 'kthreadd': контролирует создание, выполнение и завершение потоков ядра:
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+1 S     0       2       0  0  80   0 -     0 -      ?        00:00:00 kthreadd
+
+Процесс 'kswapd': управляет подкачкой памяти:
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+1 S     0     140       2  0  80   0 -     0 -      ?        00:00:00 kswapd0
+
+Процесс 'systemd-udevd': управляет устройствами:
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S     0     426       1  0  80   0 -  7052 -      ?        00:00:00 systemd-udevd
+
+СПИСОК ВСЕХ ПРОЦЕССОВ:
+F     PID     USER       CMD               ТИП   
+4     1       root       systemd           Пользовательский
+1     2       root       kthreadd          Системный
+1     3       root       pool_workqueue_   Системный
+1     4       root       kworker/R-rcu_g   Системный
+1     5       root       kworker/R-rcu_p   Системный
+1     6       root       kworker/R-slub_   Системный
+1     7       root       kworker/R-netns   Системный
+1     9       root       kworker/0:0H-ev   Системный
+1     12      root       kworker/R-mm_pe   Системный
+1     13      root       rcu_tasks_kthre   Системный
+1     14      root       rcu_tasks_rude_   Системный
+1     15      root       rcu_tasks_trace   Системный
+1     16      root       ksoftirqd/0       Системный
+1     17      root       rcu_preempt       Системный
+1     18      root       migration/0       Системный
+1     19      root       idle_inject/0     Системный
+1     20      root       cpuhp/0           Системный
+5     21      root       cpuhp/2           Системный
+1     22      root       idle_inject/2     Системный
+1     23      root       migration/2       Системный
+1     24      root       ksoftirqd/2       Системный
+1     26      root       kworker/2:0H-ev   Системный
+5     27      root       cpuhp/4           Системный
+1     28      root       idle_inject/4     Системный
+1     29      root       migration/4       Системный
+1     30      root       ksoftirqd/4       Системный
+1     32      root       kworker/4:0H-ev   Системный
+5     33      root       cpuhp/6           Системный
+1     34      root       idle_inject/6     Системный
+1     35      root       migration/6       Системный
+1     36      root       ksoftirqd/6       Системный
+1     38      root       kworker/6:0H-ev   Системный
+5     39      root       cpuhp/8           Системный
+1     40      root       idle_inject/8     Системный
+1     41      root       migration/8       Системный
+1     42      root       ksoftirqd/8       Системный
+1     44      root       kworker/8:0H-ev   Системный
+5     45      root       cpuhp/9           Системный
+1     46      root       idle_inject/9     Системный
+1     47      root       migration/9       Системный
+1     48      root       ksoftirqd/9       Системный
+1     50      root       kworker/9:0H-ev   Системный
+5     51      root       cpuhp/10          Системный
+1     52      root       idle_inject/10    Системный
+1     53      root       migration/10      Системный
+1     54      root       ksoftirqd/10      Системный
+1     56      root       kworker/10:0H-e   Системный
+5     57      root       cpuhp/11          Системный
+1     58      root       idle_inject/11    Системный
+1     59      root       migration/11      Системный
+1     60      root       ksoftirqd/11      Системный
+1     62      root       kworker/11:0H-e   Системный
+5     63      root       cpuhp/12          Системный
+1     64      root       idle_inject/12    Системный
+1     65      root       migration/12      Системный
+1     66      root       ksoftirqd/12      Системный
+1     68      root       kworker/12:0H-e   Системный
+5     69      root       cpuhp/13          Системный
+1     70      root       idle_inject/13    Системный
+1     71      root       migration/13      Системный
+1     72      root       ksoftirqd/13      Системный
+1     74      root       kworker/13:0H-e   Системный
+5     75      root       cpuhp/14          Системный
+1     76      root       idle_inject/14    Системный
+1     77      root       migration/14      Системный
+1     78      root       ksoftirqd/14      Системный
+1     80      root       kworker/14:0H-e   Системный
+5     81      root       cpuhp/15          Системный
+1     82      root       idle_inject/15    Системный
+1     83      root       migration/15      Системный
+1     84      root       ksoftirqd/15      Системный
+1     86      root       kworker/15:0H-e   Системный
+5     87      root       cpuhp/1           Системный
+1     88      root       idle_inject/1     Системный
+1     89      root       migration/1       Системный
+1     90      root       ksoftirqd/1       Системный
+1     92      root       kworker/1:0H-ev   Системный
+5     93      root       cpuhp/3           Системный
+1     94      root       idle_inject/3     Системный
+1     95      root       migration/3       Системный
+1     96      root       ksoftirqd/3       Системный
+1     98      root       kworker/3:0H-ev   Системный
+5     99      root       cpuhp/5           Системный
+1     100     root       idle_inject/5     Системный
+1     101     root       migration/5       Системный
+1     102     root       ksoftirqd/5       Системный
+1     104     root       kworker/5:0H-ev   Системный
+5     105     root       cpuhp/7           Системный
+1     106     root       idle_inject/7     Системный
+1     107     root       migration/7       Системный
+1     108     root       ksoftirqd/7       Системный
+1     110     root       kworker/7:0H-ev   Системный
+5     111     root       kdevtmpfs         Системный
+1     112     root       kworker/R-inet_   Системный
+1     113     root       kauditd           Системный
+1     115     root       khungtaskd        Системный
+1     116     root       oom_reaper        Системный
+1     118     root       kworker/R-write   Системный
+1     119     root       kcompactd0        Системный
+1     120     root       ksmd              Системный
+1     122     root       khugepaged        Системный
+1     123     root       kworker/R-kinte   Системный
+1     124     root       kworker/R-kbloc   Системный
+1     125     root       kworker/R-blkcg   Системный
+1     126     root       irq/9-acpi        Системный
+1     128     root       kworker/R-tpm_d   Системный
+1     129     root       kworker/R-ata_s   Системный
+1     130     root       kworker/R-md      Системный
+1     131     root       kworker/R-md_bi   Системный
+1     132     root       kworker/R-edac-   Системный
+1     133     root       kworker/R-devfr   Системный
+1     137     root       watchdogd         Системный
+1     139     root       kworker/13:1H-e   Системный
+1     140     root       kswapd0           Системный
+1     141     root       ecryptfs-kthrea   Системный
+1     142     root       kworker/R-kthro   Системный
+1     143     root       kworker/R-acpi_   Системный
+1     145     root       hwrng             Системный
+1     147     root       kworker/R-hfi-u   Системный
+1     149     root       kworker/R-mld     Системный
+1     150     root       kworker/14:1H-e   Системный
+1     151     root       kworker/R-ipv6_   Системный
+1     159     root       kworker/R-kstrp   Системный
+1     181     root       kworker/R-charg   Системный
+1     201     root       kworker/15:1H-e   Системный
+1     209     root       kworker/0:1H-ev   Системный
+1     218     root       kworker/4:1H-kb   Системный
+1     219     root       kworker/9:1H-kb   Системный
+1     220     root       kworker/7:1H-ev   Системный
+1     221     root       kworker/10:1H-e   Системный
+1     222     root       kworker/6:1H-ev   Системный
+1     223     root       kworker/1:1H-kb   Системный
+1     224     root       kworker/8:1H-kb   Системный
+1     225     root       kworker/11:1H-k   Системный
+1     227     root       kworker/12:1H-e   Системный
+1     228     root       kworker/2:1H-ev   Системный
+1     251     root       kworker/5:1H-kb   Системный
+1     252     root       kworker/3:1H-ev   Системный
+1     264     root       kworker/R-nvme-   Системный
+1     265     root       kworker/R-nvme-   Системный
+1     267     root       kworker/R-nvme-   Системный
+1     268     root       kworker/R-nvme-   Системный
+1     290     root       irq/155-BLTP784   Системный
+1     295     root       spi1              Системный
+1     318     root       jbd2/nvme0n1p2-   Системный
+1     319     root       kworker/R-ext4-   Системный
+4     359     root       systemd-journal   Пользовательский
+4     426     root       systemd-udevd     Пользовательский
+1     507     root       irq/156-mei_me    Системный
+1     511     root       irq/16-processo   Системный
+1     523     root       kworker/R-cfg80   Системный
+1     551     root       irq/157-iwlwifi   Системный
+1     553     root       irq/158-iwlwifi   Системный
+1     557     root       irq/159-iwlwifi   Системный
+1     559     root       irq/160-iwlwifi   Системный
+1     560     root       irq/161-iwlwifi   Системный
+1     562     root       irq/162-iwlwifi   Системный
+1     564     root       irq/163-iwlwifi   Системный
+1     566     root       irq/164-iwlwifi   Системный
+1     568     root       irq/165-iwlwifi   Системный
+1     572     root       irq/166-iwlwifi   Системный
+1     574     root       irq/167-iwlwifi   Системный
+1     576     root       irq/168-iwlwifi   Системный
+1     578     root       irq/169-iwlwifi   Системный
+1     580     root       irq/170-iwlwifi   Системный
+1     581     root       irq/171-iwlwifi   Системный
+1     583     root       irq/172-iwlwifi   Системный
+4     588     systemd+   systemd-oomd      Пользовательский
+4     590     systemd+   systemd-resolve   Пользовательский
+4     593     systemd+   systemd-timesyn   Пользовательский
+1     631     root       kworker/R-ttm     Системный
+1     634     root       kworker/R-crypt   Системный
+1     636     root       card1-crtc0       Системный
+1     637     root       card1-crtc1       Системный
+1     638     root       card1-crtc2       Системный
+1     639     root       card1-crtc3       Системный
+4     647     root       accounts-daemon   Пользовательский
+4     648     root       acpid             Пользовательский
+4     651     avahi      avahi-daemon      Пользовательский
+4     654     root       cron              Пользовательский
+4     655     message+   dbus-daemon       Пользовательский
+4     657     root       NetworkManager    Пользовательский
+4     662     root       irqbalance        Пользовательский
+4     667     root       networkd-dispat   Пользовательский
+4     671     root       polkitd           Пользовательский
+4     673     root       power-profiles-   Пользовательский
+4     678     syslog     rsyslogd          Пользовательский
+4     689     root       snapd             Пользовательский
+4     692     root       switcheroo-cont   Пользовательский
+4     698     root       systemd-logind    Пользовательский
+4     699     root       thermald          Пользовательский
+4     701     root       udisksd           Пользовательский
+4     702     root       wpa_supplicant    Пользовательский
+1     710     avahi      avahi-daemon      Системный
+4     759     root       ModemManager      Пользовательский
+4     781     root       unattended-upgr   Пользовательский
+4     789     root       gdm3              Пользовательский
+4     798     root       containerd        Пользовательский
+4     837     root       bluetoothd        Пользовательский
+4     868     root       upowerd           Пользовательский
+4     953     root       dockerd           Пользовательский
+1     963     kernoops   kerneloops        Системный
+1     969     kernoops   kerneloops        Системный
+1     995     root       kworker/R-wg-cr   Системный
+1     1233    root       irq/174-AudioDS   Системный
+4     1617    rtkit      rtkit-daemon      Пользовательский
+0     1680    root       containerd-shim   Пользовательский
+4     1712    saico     server            Пользовательский
+5     1742    root       krfcommd          Системный
+0     1766    root       docker-proxy      Пользовательский
+0     1773    root       docker-proxy      Пользовательский
+0     1783    root       docker-proxy      Пользовательский
+0     1794    root       docker-proxy      Пользовательский
+4     1906    root       packagekitd       Пользовательский
+4     2071    colord     colord            Пользовательский
+4     2194    root       gdm-session-wor   Пользовательский
+4     2209    saico     systemd           Пользовательский
+5     2210    saico     (sd-pam)          Системный
+0     2216    saico     pipewire          Пользовательский
+0     2217    saico     pipewire-pulse    Пользовательский
+0     2219    saico     wireplumber       Пользовательский
+1     2228    saico     gnome-keyring-d   Системный
+0     2240    saico     dbus-daemon       Пользовательский
+0     2247    saico     xdg-document-po   Пользовательский
+0     2253    saico     xdg-permission-   Пользовательский
+4     2259    root       fusermount3       Пользовательский
+4     2283    saico     gdm-x-session     Пользовательский
+4     2286    saico     Xorg              Пользовательский
+0     2334    saico     gnome-session-b   Пользовательский
+0     2426    saico     at-spi-bus-laun   Пользовательский
+0     2432    saico     dbus-daemon       Пользовательский
+0     2454    saico     gnome-session-c   Пользовательский
+0     2464    saico     gvfsd             Пользовательский
+0     2470    saico     gvfsd-fuse        Пользовательский
+0     2474    saico     gnome-session-b   Пользовательский
+0     2501    saico     gnome-shell       Пользовательский
+0     2550    saico     gnome-shell-cal   Пользовательский
+0     2558    saico     evolution-sourc   Пользовательский
+0     2564    saico     goa-daemon        Пользовательский
+0     2565    saico     gvfs-udisks2-vo   Пользовательский
+0     2566    saico     dconf-service     Пользовательский
+0     2567    saico     gvfsd-metadata    Пользовательский
+0     2579    saico     evolution-calen   Пользовательский
+0     2588    saico     goa-identity-se   Пользовательский
+0     2590    saico     gvfs-goa-volume   Пользовательский
+0     2597    saico     gvfs-mtp-volume   Пользовательский
+0     2602    saico     gvfs-gphoto2-vo   Пользовательский
+0     2610    saico     gvfs-afc-volume   Пользовательский
+0     2621    saico     evolution-addre   Пользовательский
+0     2639    saico     gvfsd-trash       Пользовательский
+0     2650    saico     gjs               Пользовательский
+0     2652    saico     at-spi2-registr   Пользовательский
+0     2669    saico     xdg-desktop-por   Пользовательский
+0     2676    saico     sh                Пользовательский
+0     2677    saico     gsd-a11y-settin   Пользовательский
+0     2679    saico     gsd-color         Пользовательский
+0     2680    saico     ibus-daemon       Пользовательский
+0     2681    saico     gsd-datetime      Пользовательский
+0     2682    saico     gsd-housekeepin   Пользовательский
+0     2685    saico     gsd-keyboard      Пользовательский
+0     2688    saico     gsd-media-keys    Пользовательский
+0     2689    saico     gsd-power         Пользовательский
+0     2692    saico     gsd-print-notif   Пользовательский
+0     2697    saico     gsd-rfkill        Пользовательский
+0     2699    saico     gsd-screensaver   Пользовательский
+0     2702    saico     gsd-sharing       Пользовательский
+0     2705    saico     gsd-smartcard     Пользовательский
+0     2709    saico     gsd-sound         Пользовательский
+0     2714    saico     gsd-wacom         Пользовательский
+0     2715    saico     gsd-xsettings     Пользовательский
+0     2737    saico     xdg-desktop-por   Пользовательский
+0     2742    saico     blueman-applet    Пользовательский
+0     2747    saico     evolution-alarm   Пользовательский
+0     2748    saico     gsd-disk-utilit   Пользовательский
+0     2758    saico     ibus-dconf        Пользовательский
+0     2770    saico     ibus-extension-   Пользовательский
+0     2775    saico     ibus-x11          Пользовательский
+0     2778    saico     ibus-portal       Пользовательский
+0     2789    saico     gsd-printer       Пользовательский
+4     2832    saico     snap-store        Пользовательский
+0     2901    saico     gjs               Пользовательский
+0     2943    saico     ibus-engine-sim   Пользовательский
+0     2946    saico     tracker-miner-f   Пользовательский
+0     2962    saico     blueman-tray      Пользовательский
+0     3022    saico     xdg-desktop-por   Пользовательский
+4     3080    saico     snapd-desktop-i   Пользовательский
+1     3143    saico     snapd-desktop-i   Системный
+0     3164    saico     gjs               Пользовательский
+0     3782    saico     code              Пользовательский
+0     3784    saico     code              Пользовательский
+0     3785    saico     code              Пользовательский
+0     3803    saico     chrome_crashpad   Пользовательский
+0     3866    saico     code              Пользовательский
+1     3893    saico     code              Системный
+0     3907    saico     code              Пользовательский
+0     3985    saico     code              Пользовательский
+0     3995    saico     code              Пользовательский
+0     4018    saico     code              Пользовательский
+0     4084    saico     code              Пользовательский
+0     4100    saico     code              Пользовательский
+0     4151    saico     bash              Пользовательский
+0     4274    saico     code              Пользовательский
+0     4753    saico     cpptools          Пользовательский
+0     5255    saico     update-notifier   Пользовательский
+4     6207    saico     chrome            Пользовательский
+0     6212    saico     cat               Пользовательский
+0     6213    saico     cat               Пользовательский
+0     6215    saico     chrome_crashpad   Пользовательский
+0     6217    saico     chrome_crashpad   Пользовательский
+0     6223    saico     chrome            Пользовательский
+4     6224    saico     chrome            Пользовательский
+5     6226    saico     chrome            Системный
+1     6253    saico     chrome            Системный
+0     6255    saico     chrome            Пользовательский
+1     6266    saico     chrome            Системный
+0     23595   saico     obexd             Пользовательский
+1     47964   saico     chrome            Системный
+0     48020   saico     chrome            Пользовательский
+0     54862   saico     gnome-terminal    Пользовательский
+0     54865   saico     gnome-terminal.   Пользовательский
+0     54868   saico     gnome-terminal-   Пользовательский
+0     54899   saico     bash              Пользовательский
+4     54943   saico     obsidian          Пользовательский
+1     54946   saico     Obsidian-1.8.9.   Системный
+0     54951   saico     obsidian          Пользовательский
+4     54952   saico     obsidian          Пользовательский
+1     54954   saico     obsidian          Системный
+1     55024   saico     obsidian          Системный
+0     55030   saico     obsidian          Пользовательский
+0     55057   saico     obsidian          Пользовательский
+4     75915   saico     telegram-deskto   Пользовательский
+4     93275   root       cupsd             Пользовательский
+4     93277   root       cups-browsed      Пользовательский
+4     123016  root       prog              Пользовательский
+1     123019  root       prog              Системный
+4     123699  root       prog              Пользовательский
+1     123702  root       prog              Системный
+0     134762  saico     ssh-agent         Пользовательский
+1     146124  root       kworker/13:0-wg   Системный
+1     150044  root       kworker/9:0-wg-   Системный
+1     154275  root       kworker/1:1-wg-   Системный
+1     156422  root       kworker/15:2-i9   Системный
+1     157370  root       kworker/8:1-eve   Системный
+1     161882  root       kworker/0:0-eve   Системный
+1     162125  root       kworker/7:2-eve   Системный
+1     163548  root       kworker/4:0-wg-   Системный
+1     163552  root       kworker/11:2-mm   Системный
+1     164522  root       kworker/10:2-wg   Системный
+1     164788  root       kworker/14:1-wg   Системный
+1     166126  root       kworker/6:1-wg-   Системный
+1     166192  root       kworker/2:1-wg-   Системный
+1     167518  root       kworker/u32:1-e   Системный
+1     167649  root       kworker/12:2-ev   Системный
+1     168779  root       kworker/1:3-wg-   Системный
+1     168780  root       kworker/6:0-wg-   Системный
+1     169580  root       kworker/5:3-wg-   Системный
+1     169722  root       kworker/11:0-ev   Системный
+1     169970  root       kworker/3:2-wg-   Системный
+1     169971  root       kworker/8:2-mm_   Системный
+1     170387  root       kworker/14:2-ev   Системный
+1     171077  root       kworker/7:0-wg-   Системный
+1     171512  root       kworker/12:0-ev   Системный
+1     171954  root       kworker/u33:1-i   Системный
+1     172705  root       kworker/u32:2-f   Системный
+1     172706  root       kworker/u32:3-e   Системный
+1     174426  root       kworker/13:1-ev   Системный
+1     174611  root       kworker/5:0-wg-   Системный
+1     174612  root       kworker/2:0-eve   Системный
+1     174871  root       kworker/u33:0-i   Системный
+1     175455  root       kworker/1:2-wg-   Системный
+1     175460  saico     chrome            Системный
+1     175471  root       kworker/15:0-i9   Системный
+1     175511  root       kworker/0:1-wg-   Системный
+1     175512  root       kworker/4:1-wg-   Системный
+1     175555  root       kworker/3:1-wg-   Системный
+1     175556  root       kworker/10:0-mm   Системный
+1     175558  root       kworker/9:1-wg-   Системный
+1     175627  root       kworker/6:2-eve   Системный
+1     175639  root       kworker/14:0-mm   Системный
+1     177998  root       kworker/12:1-wg   Системный
+1     178323  root       kworker/8:0-eve   Системный
+4     179691  root       fwupd             Пользовательский
+1     179933  root       kworker/5:1       Системный
+1     180022  root       kworker/3:0-eve   Системный
+0     180346  saico     logger.sh         Пользовательский
+1     180347  saico     logger.sh         Системный
+0     180348  saico     script            Пользовательский
+0     180349  saico     ansifilter        Пользовательский
+0     180350  saico     bash              Пользовательский
+1     180979  root       kworker/11:1-ev   Системный
+1     181063  saico     chrome            Системный
+1     181248  saico     chrome            Системный
+1     181258  saico     chrome            Системный
+1     181295  saico     chrome            Системный
+0     181966  saico     sh                Пользовательский
+0     181967  saico     cpuUsage.sh       Пользовательский
+0     181975  saico     sleep             Пользовательский
+0     181977  saico     1.4.sh            Пользовательский
+4     181990  saico     ps                Пользовательский
+
+------------------------- ЗАДАНИЕ 1.5 -------------------------
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 1/1.5.sh 
+Пт 18 апр 2025 02:52:43 MSK
+Основная инфомация о прародителе всех пользовательских процессов текущей сессии:
+
+Статус: 
+Name:	bash
+Umask:	0002
+State:	S (sleeping)
+Tgid:	180350
+Ngid:	0
+Pid:	180350
+PPid:	180348
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 109 122 135 136 999 1000 
+NStgid:	180350
+NSpid:	180350
+NSpgid:	180350
+NSsid:	180350
+Kthread:	0
+VmPeak:	    9496 kB
+VmSize:	    9496 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	    6016 kB
+VmRSS:	    6016 kB
+RssAnon:	    2304 kB
+RssFile:	    3712 kB
+RssShmem:	       0 kB
+VmData:	    2372 kB
+VmStk:	     136 kB
+VmExe:	     892 kB
+VmLib:	    1864 kB
+VmPTE:	      64 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	0/62553
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000010000
+SigIgn:	0000000000384004
+SigCgt:	000000004b813efb
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	thread vulnerable
+SpeculationIndirectBranch:	conditional enabled
+Cpus_allowed:	ffff
+Cpus_allowed_list:	0-15
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	164
+nonvoluntary_ctxt_switches:	8
+x86_Thread_features:	
+x86_Thread_features_locked:	
+
+Переменные окружения: 
+SHELL=/bin/bashSESSION_MANAGER=local/saico-MDF-XX:@/tmp/.ICE-unix/2474,unix/saico-MDF-XX:/tmp/.ICE-unix/2474QT_ACCESSIBILITY=1COLORTERM=truecolorXDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu-xorg:/etc/xdgSSH_AGENT_LAUNCHER=gnome-keyringXDG_MENU_PREFIX=gnome-TERM_PROGRAM_VERSION=1.99.2XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG=/etc/xdg/xdg-ubuntu-xorg:/etc/xdgGNOME_DESKTOP_SESSION_ID=this-is-deprecatedGTK_IM_MODULE=ibusGDK_BACKEND_VSCODE_SNAP_ORIG=FONTCONFIG_PATH=/etc/fontsLANGUAGE=ru:enLC_ADDRESS=ru_RU.UTF-8GNOME_SHELL_SESSION_MODE=ubuntuGIO_MODULE_DIR_VSCODE_SNAP_ORIG=LC_NAME=ru_RU.UTF-8SSH_AUTH_SOCK=/run/user/1000/keyring/sshXDG_DATA_HOME=/home/saico/snap/code/190/.local/shareXMODIFIERS=@im=ibusDESKTOP_SESSION=ubuntu-xorgLC_MONETARY=ru_RU.UTF-8BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/code_code.desktopGTK_MODULES=gail:atk-bridgePWD=/home/saico/repo/mine/os/lb2GSETTINGS_SCHEMA_DIR=/home/saico/snap/code/190/.local/share/glib-2.0/schemasLOGNAME=saicoXDG_SESSION_DESKTOP=ubuntu-xorgGTK_EXE_PREFIX=/snap/code/190/usrXDG_SESSION_TYPE=x11GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1SYSTEMD_EXEC_PID=2501XAUTHORITY=/run/user/1000/gdm/XauthorityVSCODE_GIT_ASKPASS_NODE=/snap/code/190/usr/share/code/codeGJS_DEBUG_TOPICS=JS ERROR;JS LOGWINDOWPATH=2HOME=/home/saicoUSERNAME=saicoLANG=ru_RU.UTF-8LC_PAPER=ru_RU.UTF-8LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:XDG_CURRENT_DESKTOP=UnityGIT_ASKPASS=/snap/code/190/usr/share/code/resources/app/extensions/git/dist/askpass.shINVOCATION_ID=38492f8c4f0a46b39572337a9ca40dc3MANAGERPID=2209CHROME_DESKTOP=code.desktopGJS_DEBUG_OUTPUT=stderrNVM_DIR=/home/saico/.nvmVSCODE_GIT_ASKPASS_EXTRA_ARGS=GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG=GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG=LESSCLOSE=/usr/bin/lesspipe %s %sXDG_SESSION_CLASS=userLC_IDENTIFICATION=ru_RU.UTF-8TERM=dumbGTK_PATH=/snap/code/190/usr/lib/x86_64-linux-gnu/gtk-3.0LESSOPEN=| /usr/bin/lesspipe %sUSER=saicoGTK_PATH_VSCODE_SNAP_ORIG=VSCODE_GIT_IPC_HANDLE=/run/user/1000/vscode-git-740c954e99.sockDISPLAY=:0SHLVL=2LOCPATH=/snap/code/190/usr/lib/localeLC_TELEPHONE=ru_RU.UTF-8QT_IM_MODULE=ibusXDG_DATA_HOME_VSCODE_SNAP_ORIG=LC_MEASUREMENT=ru_RU.UTF-8GTK_EXE_PREFIX_VSCODE_SNAP_ORIG=PAPERSIZE=a4XDG_RUNTIME_DIR=/run/user/1000XDG_DATA_DIRS_VSCODE_SNAP_ORIG=/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktopLC_TIME=ru_RU.UTF-8FONTCONFIG_FILE=/etc/fonts/fonts.confVSCODE_GIT_ASKPASS_MAIN=/snap/code/190/usr/share/code/resources/app/extensions/git/dist/askpass-main.jsJOURNAL_STREAM=8:8962XDG_DATA_DIRS=/home/saico/snap/code/190/.local/share:/home/saico/snap/code/190:/snap/code/190/usr/share:/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktopGDK_BACKEND=x11PATH=/home/saico/.local/bin:/home/saico/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/saico/.config/Code/User/globalStorage/github.copilot-chat/debugCommandGDMSESSION=ubuntu-xorgORIGINAL_XDG_CURRENT_DESKTOP=ubuntu:GNOMEGTK_IM_MODULE_FILE=/home/saico/snap/code/common/.cache/immodules/immodules.cacheDBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/busLOCPATH_VSCODE_SNAP_ORIG=GIO_MODULE_DIR=/home/saico/snap/code/common/.cache/gio-modulesGIO_LAUNCHED_DESKTOP_FILE_PID=3324GIO_LAUNCHED_DESKTOP_FILE=/var/lib/snapd/desktop/applications/code_code.desktopLC_NUMERIC=ru_RU.UTF-8OLDPWD=/home/saico/repo/mine/osTERM_PROGRAM=vscode_=/usr/bin/script
+
+Открытые файловые дескрипторы: 
+итого 0
+lrwx------ 1 saico saico 64 апр 18 02:50 0 -> /dev/pts/4
+lrwx------ 1 saico saico 64 апр 18 02:50 1 -> /dev/pts/4
+lr-x------ 1 saico saico 64 апр 18 02:50 103 -> /snap/code/190/usr/share/code/v8_context_snapshot.bin
+lrwx------ 1 saico saico 64 апр 18 02:50 2 -> /dev/pts/4
+lrwx------ 1 saico saico 64 апр 18 02:50 255 -> /dev/pts/4
+l-wx------ 1 saico saico 64 апр 18 02:50 36 -> /home/saico/.config/Code/logs/20250417T205242/ptyhost.log
+lrwx------ 1 saico saico 64 апр 18 02:50 37 -> 'socket:[11105]'
+l-wx------ 1 saico saico 64 апр 18 02:50 63 -> 'pipe:[648867]'
+
+======================ЗАДАНИЕ 2======================
+
+------------------------- ЗАДАНИЕ 2.1 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Родительский и дочерний процессы имеют собственные копии переменных
+#   (разные адресные пространства, что видно по разным адресам переменной variable)
+# - Процессы конкурируют за CPU, что видно по чередованию вывода их сообщений
+# - Планировщик ОС определяет, какой процесс получает управление в каждый момент
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 2/2.1/./2.1.sh 
+Пт 18 апр 2025 02:53:39 MSK
+===== ДЕМОНСТРАЦИЯ ОДНОКРАТНОГО ВЫЧИСЛЕНИЯ =====
+Однократное вычисление родителя
+Родитель: PID=[182706], PPID=[182695]
+
+Однократное вычисление потомка
+Потомок: PID=[182707], PPID=[182706]
+
+Завершение прогаммы: PID=[182707]
+Завершение прогаммы: PID=[182706]
+
+=================================
+
+===== ДЕМОНСТРАЦИЯ ЦИКЛИЧЕСКОГО ВЫЧИСЛЕНИЯ =====
+--- Программа с циклическим вычислением запущена ---
+Родитель запущен: PID=[182708],  childPID=[182709], var=[0]
+
+--- Начало циклических вычислений для процесса Родитель ---
+PID=182708  | PPID=182695  | iteration=0          | type=Родитель
+Потомок запущен: PID=[182709], PPID=[182708], var=[0]
+
+--- Начало циклических вычислений для процесса Потомок ---
+PID=182709  | PPID=182708  | iteration=0          | type=Потомок
+PID=182708  | PPID=182695  | iteration=1000000    | type=Родитель
+PID=182708  | PPID=182695  | iteration=2000000    | type=Родитель
+PID=182709  | PPID=182708  | iteration=1000000    | type=Потомок
+PID=182708  | PPID=182695  | iteration=3000000    | type=Родитель
+PID=182708  | PPID=182695  | iteration=4000000    | type=Родитель
+PID=182709  | PPID=182708  | iteration=2000000    | type=Потомок
+PID=182708  | PPID=182695  | iteration=5000000    | type=Родитель
+PID=182708  | PPID=182695  | iteration=6000000    | type=Родитель
+PID=182709  | PPID=182708  | iteration=3000000    | type=Потомок
+PID=182708  | PPID=182695  | iteration=7000000    | type=Родитель
+PID=182708  | PPID=182695  | iteration=8000000    | type=Родитель
+PID=182709  | PPID=182708  | iteration=4000000    | type=Потомок
+PID=182708  | PPID=182695  | iteration=9000000    | type=Родитель
+
+Родитель ожидает завершения потомка с PID=[182709]...
+PID=182709  | PPID=182708  | iteration=5000000    | type=Потомок
+PID=182709  | PPID=182708  | iteration=6000000    | type=Потомок
+PID=182709  | PPID=182708  | iteration=7000000    | type=Потомок
+PID=182709  | PPID=182708  | iteration=8000000    | type=Потомок
+PID=182709  | PPID=182708  | iteration=9000000    | type=Потомок
+
+Потомок завершен: PID=[182709], PPID=[182708], var=[110]
+
+Родитель завершен: PID=[182708], var=[210]
+
+Программа завершена: PID=[182708]
+
+=================================
+
+------------------------- ЗАДАНИЕ 2.2 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - При обычном запуске родительским процессом будет shell терминала (или bash-скрипт)
+# - При фоновом запуске в таблице процессов можно увидеть другие взаимосвязи
+# - Команда ps -l показывает подробную информацию о процессах:
+#   F - флаги, S - состояние, UID/PID/PPID - идентификаторы,
+#   C - использование CPU, PRI - приоритет, и т.д.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 2/2.2/./2.2.sh
+Пт 18 апр 2025 02:53:49 MSK
+
+--- Информация о father ---
+PID=[182853], PPID=[182842]
+
+
+--- Информация о son ---
+PID=[182854], PPID=[182853]
+
+
+--- Вывод ps от процесса-потомка (PID=182854) ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  182842  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 2.2.sh
+0 S  1000  182853  182842  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 S  1000  182854  182853  0  80   0 -   661 do_wai pts/4    00:00:00 son
+0 S  1000  182855  182854  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  182856  182855  0  80   0 -  2507 -      pts/4    00:00:00 ps
+Потомок завершил свою работу
+
+--- Вывод ps от процесса-родителя (PID=182853) ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  182842  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 2.2.sh
+0 S  1000  182853  182842  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 S  1000  182857  182853  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  182858  182857  0  80   0 -  2507 -      pts/4    00:00:00 ps
+Родитель завершил работу
+
+------------------------- ЗАДАНИЕ 2.3 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Все функции семейства exec заменяют текущий образ процесса новым
+# - После успешного вызова exec код процесса после вызова не выполняется
+# - Различные функции семейства предоставляют гибкие способы передачи
+#   аргументов и переменных окружения новой программе
+# - Варианты с "p" автоматически ищут программу в каталогах из PATH
+# - Варианты с "e" позволяют задать собственное окружение для новой программы
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 2/2.3/./2.3.sh
+Пт 18 апр 2025 02:53:58 MSK
+===== ДЕМОНСТРАЦИЯ ФУНКЦИЙ СЕМЕЙСТВА EXEC =====
+
+--- Пример execl ---
+
+Был создан потомок: PID=[183013], PPID=[183012]
+Hello, execl!
+
+--- Пример execlp ---
+
+Был создан потомок: PID=[183014], PPID=[183012]
+итого 48
+drwxrwxr-x 2 saico saico  4096 апр 18 02:53 .
+drwxrwxr-x 6 saico saico  4096 апр  5 16:04 ..
+-rw-rw-r-- 1 saico saico   277 апр 18 02:53 2.3.log
+-rwxrwxr-x 1 saico saico  2379 апр 14 00:24 2.3.sh
+-rwxrwxr-x 1 saico saico 16952 апр 18 02:53 demo
+-rw-rw-r-- 1 saico saico  8285 апр  6 18:27 exec_demo.c
+
+--- Пример execle ---
+
+Был создан потомок: PID=[183020], PPID=[183012]
+PATH=/bin:/usr/bin
+TERM=xterm
+CUSTOM_VAR=hello
+
+--- Пример execv ---
+
+Был создан потомок: PID=[183021], PPID=[183012]
+Hello, execv!
+
+--- Пример execvp ---
+
+Был создан потомок: PID=[183022], PPID=[183012]
+итого 40
+-rw-rw-r-- 1 saico saico   964 апр 18 02:53 2.3.log
+-rwxrwxr-x 1 saico saico  2379 апр 14 00:24 2.3.sh
+-rwxrwxr-x 1 saico saico 16952 апр 18 02:53 demo
+-rw-rw-r-- 1 saico saico  8285 апр  6 18:27 exec_demo.c
+
+--- Пример execve ---
+
+Был создан потомок: PID=[183023], PPID=[183012]
+PATH=/bin:/usr/bin
+TERM=xterm
+ANOTHER_VAR=world
+
+===== ДЕМОНСТРАЦИЯ ЗАВЕРШЕНА =====
+
+------------------------- ЗАДАНИЕ 2.4 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Нормальное завершение: родитель ждет завершения потомка с помощью waitpid()
+# - Orphan процесс: потомок "осиротел", его новым родителем становится процесс уровня инициализации
+# системы (systemd)
+# - Zombie процесс: потомок завершился, но его запись остается в таблице процессов
+#    (до тех пор, пока родитель не запросит код возврата потомка)
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 2/2.4/./2.4.sh
+Пт 18 апр 2025 02:54:04 MSK
+==== Случай (а): отец ожидает завершения сына ====
+
+--- Информация о father ---
+PID=[183119], PPID=[183107]
+
+
+--- Информация о son ---
+PID=[183120], PPID=[183119]
+
+
+==== Случай (б): отец завершается раньше сына ====
+
+--- Информация о father ---
+PID=[183196], PPID=[183107]
+
+
+--- Информация о son ---
+PID=[183197], PPID=[2209]
+
+
+--- Вывод ps от процесса-сироты (PID=183197) ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183107  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 2.4.sh
+0 S  1000  183197    2209  0  80   0 -   661 do_wai pts/4    00:00:00 son
+0 S  1000  183198  183107  0  80   0 -  1431 hrtime pts/4    00:00:00 sleep
+0 S  1000  183199  183197  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183200  183199  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+--- Новый родитель для процесса-сироты (PID=183197) ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S  1000    2209       1  0  80   0 -  4541 ep_pol ?        00:00:00 systemd
+
+==== Случай (в): потомок стал зомби ====
+
+--- Информация о father ---
+PID=[183221], PPID=[183107]
+
+
+--- Информация о son ---
+PID=[183222], PPID=[183221]
+
+
+--- Вывод ps от процесса-отца (PID=183221) ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183107  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 2.4.sh
+0 S  1000  183221  183107  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 Z  1000  183222  183221  0  80   0 -     0 -      pts/4    00:00:00 son <defunct>
+0 S  1000  183238  183221  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183239  183238  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+======================ЗАДАНИЕ 3======================
+
+------------------------- ЗАДАНИЕ 3.1 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - son1: Процесс завершается по умолчанию при получении сигнала SIGUSR1
+# - son2: Процесс игнорирует сигнал SIGUSR1 и продолжает выполнение
+# - son3: Процесс перехватывает сигнал SIGUSR1 и обрабатывает его,
+#   выводя сообщение о получении сигнала и продолжая выполнение
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 3/3.1/./3.1.sh
+Пт 18 апр 2025 02:54:28 MSK
+
+--- Информация о father ---
+PID=[183474], PPID=[183443]
+
+
+--- Информация о son1 ---
+PID=[183476], PPID=[183474]
+
+
+--- Информация о son2 ---
+PID=[183477], PPID=[183474]
+
+
+--- Информация о son3 ---
+PID=[183478], PPID=[183474]
+
+
+--- Вывод ps от процесса-отца (PID=183474) до отправки сигналов ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183443  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 3.1.sh
+0 S  1000  183474  183443  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 S  1000  183476  183474  0  80   0 -   661 hrtime pts/4    00:00:00 son1
+0 S  1000  183477  183474  0  80   0 -   661 hrtime pts/4    00:00:00 son2
+0 S  1000  183478  183474  0  80   0 -   661 hrtime pts/4    00:00:00 son3
+0 S  1000  183499  183474  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183500  183499  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+son3: Получен сигнал SIGUSR1, обрабатываю...
+son3: продолжает работу
+son2: продолжает работу
+
+--- Вывод ps от процесса-отца (PID=183474) после отправки сигналов ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183443  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 3.1.sh
+0 S  1000  183474  183443  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 Z  1000  183476  183474  0  80   0 -     0 -      pts/4    00:00:00 son1 <defunct>
+0 S  1000  183477  183474  0  80   0 -   661 hrtime pts/4    00:00:00 son2
+0 S  1000  183478  183474  0  80   0 -   661 hrtime pts/4    00:00:00 son3
+0 S  1000  183525  183474  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183526  183525  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+--------------------------------- ЗАДАНИЕ 3.2 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - При отправке сигнала SIGKILL процессу son1, он моментально завершился
+#   без возможности обработки сигнала.
+# - Процесс son2 получил сигнал SIGINT и успешно обработал его.
+# - Процесс son3 не получал сигналов от родителя и завершился самостоятельно
+#   с кодом 0 после истечения времени своей работы.
+# - Сигнал SIGCHLD вызвал обработчик в родительском процессе, который
+#   с помощью waitpid(-1, &status, WNOHANG) асинхронно собрал статусы всех
+#   завершившихся дочерних процессов, не блокируя основной поток выполнения.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 3/3.2/./3.2.sh
+Пт 18 апр 2025 02:54:39 MSK
+
+--- Информация о father ---
+PID=[183678], PPID=[183657]
+
+
+--- Информация о son1 ---
+PID=[183679], PPID=[183678]
+
+
+--- Информация о son2 ---
+PID=[183680], PPID=[183678]
+
+
+--- Информация о son3 ---
+PID=[183681], PPID=[183678]
+
+
+--- Вывод ps от процесса-отца (PID=183678) до отправки сигналов ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183657  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 3.2.sh
+0 S  1000  183678  183657  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 S  1000  183679  183678  0  80   0 -   661 hrtime pts/4    00:00:00 son1
+0 S  1000  183680  183678  0  80   0 -   661 hrtime pts/4    00:00:00 son2
+0 S  1000  183681  183678  0  80   0 -   661 hrtime pts/4    00:00:00 son3
+0 S  1000  183702  183678  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183703  183702  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+son2: Получен сигнал SIGINT, обрабатываю...
+son2: Текущее время: Fri Apr 18 02:54:40 2025
+son2: процесс завершен
+
+--- Вывод ps от процесса-отца (PID=183678) после отправки сигналов ---
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  180350  180348  0  80   0 -  2374 do_wai pts/4    00:00:00 bash
+0 S  1000  183657  180350  0  80   0 -  1857 do_wai pts/4    00:00:00 3.2.sh
+0 S  1000  183678  183657  0  80   0 -   661 do_wai pts/4    00:00:00 father
+0 Z  1000  183679  183678  0  80   0 -     0 -      pts/4    00:00:00 son1 <defunct>
+0 Z  1000  183680  183678  0  80   0 -     0 -      pts/4    00:00:00 son2 <defunct>
+0 S  1000  183681  183678  0  80   0 -   661 hrtime pts/4    00:00:00 son3
+0 S  1000  183704  183678  0  80   0 -   723 do_wai pts/4    00:00:00 sh
+4 R  1000  183705  183704  0  80   0 -  2507 -      pts/4    00:00:00 ps
+
+--- Процесс: PID=[183679], PPID=[183678] завершился по сигналу: code=[9] ---
+
+--- Процесс: PID=[183680], PPID=[183678] завершился самостоятельно: code=[0] ---
+
+--- Процесс: PID=[183681], PPID=[183678] завершился самостоятельно: code=[0] ---
+
+======================ЗАДАНИЕ 4======================
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Нити (потоки) имеют различные идентификаторы, но
+#   работают в общем адресном пространстве процесса.
+# - Демонстрирует разницу между POSIX threads API и системным вызовом clone().
+# - Иллюстрирует, что при удалении отдельной нити через kill весь процесс
+#   может быть завершен, так как нити разделяют общие ресурсы.
+# - Потоки одного процесса имеют общую текущую директорию (cwd)
+# - Потоки имеют доступ к одним и тем же переменным окружения
+# - Файловые дескрипторы разделяются между потоками процесса
+# - Все потоки работают в общем адресном пространстве (одинаковые адреса переменных)
+# - Потоки имеют общие обработчики сигналов
+# - Каждый поток имеет собственный идентификатор потока (thread ID),
+#   но все они имеют один и тот же идентификатор процесса (PID)
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 4/./4.sh 
+Пт 18 апр 2025 02:55:22 MSK
+
+==== Демонстрация работы потоков ====
+
+--- Создание потоков через pthread_create() ---
+Поток [2]: Kernel ID (LWP)=[313173], val=[100], &val=[0x7ffedd712844]
+Поток [0]: Kernel ID (LWP)=[313171], val=[100], &val=[0x7ffedd712844]
+Поток [1]: Kernel ID (LWP)=[313172], val=[100], &val=[0x7ffedd712844]
+Поток [4]: Kernel ID (LWP)=[313175], val=[100], &val=[0x7ffedd712844]
+Поток [3]: Kernel ID (LWP)=[313174], val=[100], &val=[0x7ffedd712844]
+
+--- Информация о потоках, созданных через pthread_create() ---
+F S   UID     PID    PPID     LWP  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000   33505   33417   33505  0  80   0 -  2452 do_wai pts/0    00:00:00 bash
+0 S  1000  313159   33505  313159  0  80   0 -  1858 do_wai pts/0    00:00:00 4.sh
+0 S  1000  313170  313159  313170  0  80   0 - 10940 do_wai pts/0    00:00:00 threads
+1 S  1000  313170  313159  313171  0  80   0 - 10940 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313172  0  80   0 - 10940 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313173  0  80   0 - 10940 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313174  0  80   0 - 10940 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313175  0  80   0 - 10940 hrtime pts/0    00:00:00 threads
+0 S  1000  313176  313170  313176  0  80   0 -   724 do_wai pts/0    00:00:00 sh
+4 R  1000  313177  313176  313177  0  80   0 -  2508 -      pts/0    00:00:00 ps
+
+--- Создание потоков через clone() ---
+Поток [0]: Kernel ID (LWP)=[313199], val=[100], &val=[0x7ffedd712844]
+Поток [1]: Kernel ID (LWP)=[313200], val=[100], &val=[0x7ffedd712844]
+Поток [2]: Kernel ID (LWP)=[313201], val=[100], &val=[0x7ffedd712844]
+Поток [3]: Kernel ID (LWP)=[313202], val=[100], &val=[0x7ffedd712844]
+Поток [4]: Kernel ID (LWP)=[313203], val=[100], &val=[0x7ffedd712844]
+
+--- Информация о потоках, созданных через clone() ---
+F S   UID     PID    PPID     LWP  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000   33505   33417   33505  0  80   0 -  2452 do_wai pts/0    00:00:00 bash
+0 S  1000  313159   33505  313159  0  80   0 -  1858 do_wai pts/0    00:00:00 4.sh
+0 S  1000  313170  313159  313170  0  80   0 - 10176 do_wai pts/0    00:00:00 threads
+1 S  1000  313170  313159  313199  0  80   0 - 10176 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313200  0  80   0 - 10176 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313201  0  80   0 - 10176 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313202  0  80   0 - 10176 hrtime pts/0    00:00:00 threads
+1 S  1000  313170  313159  313203  0  80   0 - 10176 hrtime pts/0    00:00:00 threads
+0 S  1000  313204  313170  313204  0  80   0 -   724 do_wai pts/0    00:00:00 sh
+4 R  1000  313205  313204  313205  0  80   0 -  2508 -      pts/0    00:00:00 ps
+
+--- Удаление последнего потока (LWP=313170) ---
+4/./4.sh: строка 47: 313170 Убито              ./"${EXEC[$i]}" &>> "$LOGFILE"
+
+==== Демонстрация общих ресурсов потоков одного процесса ====
+
+--- Тест общедоступности текущей директории ---
+Поток [2]: Kernel ID (LWP)=[313210], PID=[313207], cwd=[/home/saico/repo/mine/os/lb2/4]
+Поток [3]: Kernel ID (LWP)=[313211], PID=[313207], cwd=[/home/saico/repo/mine/os/lb2/4]
+Поток [1]: Kernel ID (LWP)=[313209], PID=[313207], cwd=[/home/saico/repo/mine/os/lb2/4]
+Поток [0]: Kernel ID (LWP)=[313208], PID=[313207], cwd=[/home/saico/repo/mine/os/lb2/4]
+Поток [4]: Kernel ID (LWP)=[313212], PID=[313207], cwd=[/home/saico/repo/mine/os/lb2/4]
+
+--- Тест общедоступности переменных окружежения ---
+Поток [0]: Kernel ID (LWP)=[313213], PID=[313207], $USER=[saico], $HOME=[/home/saico]
+Поток [1]: Kernel ID (LWP)=[313214], PID=[313207], $USER=[saico], $HOME=[/home/saico]
+Поток [2]: Kernel ID (LWP)=[313215], PID=[313207], $USER=[saico], $HOME=[/home/saico]
+Поток [3]: Kernel ID (LWP)=[313216], PID=[313207], $USER=[saico], $HOME=[/home/saico]
+Поток [4]: Kernel ID (LWP)=[313217], PID=[313207], $USER=[saico], $HOME=[/home/saico]
+
+--- Тест общедоступности файловых дескрипторов ---
+Поток [0]: Kernel ID (LWP)=[313207], PID=[313218] записал информацию
+Поток [1]: Kernel ID (LWP)=[313207], PID=[313219] записал информацию
+Поток [2]: Kernel ID (LWP)=[313207], PID=[313220] записал информацию
+Поток [3]: Kernel ID (LWP)=[313207], PID=[313221] записал информацию
+Поток [4]: Kernel ID (LWP)=[313207], PID=[313222] записал информацию
+
+--- Тест общедоступности адресного пространства ---
+Поток [1]: Kernel ID (LWP)=[313226], PID=[313207], var_ptr=[3], &var_ptr=[0x7ffebd48c8d4]
+Поток [0]: Kernel ID (LWP)=[313225], PID=[313207], var_ptr=[3], &var_ptr=[0x7ffebd48c8d4]
+Поток [2]: Kernel ID (LWP)=[313227], PID=[313207], var_ptr=[3], &var_ptr=[0x7ffebd48c8d4]
+Поток [3]: Kernel ID (LWP)=[313228], PID=[313207], var_ptr=[3], &var_ptr=[0x7ffebd48c8d4]
+Поток [4]: Kernel ID (LWP)=[313229], PID=[313207], var_ptr=[3], &var_ptr=[0x7ffebd48c8d4]
+
+--- Тест общедоступности сигналов ---
+Обработчик: Kernel ID (LWP)=[313230], PID=[313207], signal=[10]
+Обработчик: Kernel ID (LWP)=[313231], PID=[313207], signal=[10]
+Обработчик: Kernel ID (LWP)=[313232], PID=[313207], signal=[10]
+Обработчик: Kernel ID (LWP)=[313233], PID=[313207], signal=[10]
+Обработчик: Kernel ID (LWP)=[313234], PID=[313207], signal=[10]
+
+======================ЗАДАНИЕ 5======================
+
+------------------------- ЗАДАНИЕ 5.1 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ: 
+# - Политика планирования SCHED_OTHER использует алгоритм справедливого 
+#   разделения процессорного времени с учетом приоритетов процессов.
+# - Чем ниже значение nice (отрицательные значения), тем больше процессорного
+#   времени получает процесс. 
+# - При одинаковых приоритетах время распределяется
+#   примерно поровну между всеми процессами на одном ядре CPU.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.1/./5.1.sh
+Пт 18 апр 2025 02:55:41 MSK
+
+==== Определение политики планирования и приоритета из shell ====
+
+==== Информация о процессе 254453 ====
+    PID  NI CLS COMMAND
+ 254453   0  TS prog1
+
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254453], policy=[SCHED_OTHER], priority=[0]
+
+
+==== Определение политики планирования и приоритета программно ====
+
+--- Текущая политика планирования ---
+SCHED_OTHER (стандартная)
+Nice значение: 0
+
+
+===== Запуск процессов с политикой SCHED_OTHER с одинаковым приоритетом =====
+
+Запуск процесса: prog1, приоритет: 0
+Запуск процесса: prog2, приоритет: 0
+Запуск процесса: prog3, приоритет: 0
+Запуск процесса: prog4, приоритет: 0
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog2: PPID=[254427], PID=[254533], policy=[SCHED_OTHER], priority=[0]
+prog1: PPID=[254427], PID=[254532], policy=[SCHED_OTHER], priority=[0]
+prog4: PPID=[254427], PID=[254535], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+prog3: PPID=[254427], PID=[254534], policy=[SCHED_OTHER], priority=[0]
+
+
+===== Запуск процессов с политикой SCHED_OTHER с различным приоритетом =====
+
+Запуск процесса: prog1, приоритет: 10
+Запуск процесса: prog2, приоритет: 5
+Запуск процесса: prog3, приоритет: -5
+Запуск процесса: prog4, приоритет: -10
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog4: PPID=[254427], PID=[254752], policy=[SCHED_OTHER], priority=[-10]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog3: PPID=[254427], PID=[254751], policy=[SCHED_OTHER], priority=[-5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog2: PPID=[254427], PID=[254750], policy=[SCHED_OTHER], priority=[5]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+prog1: PPID=[254427], PID=[254749], policy=[SCHED_OTHER], priority=[10]
+
+------------------------- ЗАДАНИЕ 5.2 -------------------------
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.2/./5.2.sh
+Пт 18 апр 2025 02:56:13 MSK
+
+--- Вычисляем приоритет для текущего процесса ---
+nice = [0]
+
+--- Изменяем приоритет для текущего процесса через setpriority ---
+nice = [15]
+
+--- Изменяем приоритет для текущего процесса через nice ---
+nice = [14]
+
+--- Вычисляем приоритет для системного процесса ---
+nice = [0]
+
+--- Изменяем приоритет для системного процесса через setpriority ---
+nice = [15]
+
+------------------------- ЗАДАНИЕ 5.3 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ: 
+# - Политика планирования SCHED_FIFO представляет собой алгоритм 
+#   планирования «first in - first out» с вытеснением на основе приоритетов.
+# - При одинаковых приоритетах процессы выполняются последовательно в порядке их запуска,
+#   каждый процесс полностью завершает свою работу, прежде чем CPU будет предоставлен следующему.
+# - При разных приоритетах процессы выполняются строго в порядке убывания приоритета,
+#   независимо от порядка их запуска.
+# - Диапазон приоритетов для SCHED_FIFO составляет от 1 до 99.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.3/./5.3.sh
+Пт 18 апр 2025 02:56:27 MSK
+
+===== Запуск процессов с политикой FIFO с одинаковым приоритетом =====
+
+Запуск процесса: prog1, приоритет: 35
+Запуск процесса: prog2, приоритет: 35
+Запуск процесса: prog3, приоритет: 35
+Запуск процесса: prog4, приоритет: 35
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[261304], PID=[261330], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[261304], PID=[261331], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[261304], PID=[261332], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[261304], PID=[261333], policy=[SCHED_FIFO], priority=[35]
+
+
+===== Запуск процессов с политикой FIFO с разным приоритетом =====
+
+Запуск процесса: prog1, приоритет: 70
+Запуск процесса: prog2, приоритет: 10
+Запуск процесса: prog3, приоритет: 5
+Запуск процесса: prog4, приоритет: 90
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[261304], PID=[261588], policy=[SCHED_FIFO], priority=[90]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[261304], PID=[261585], policy=[SCHED_FIFO], priority=[70]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[261304], PID=[261586], policy=[SCHED_FIFO], priority=[10]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[261304], PID=[261587], policy=[SCHED_FIFO], priority=[5]
+
+
+===== Границы различных приоритетов =====
+
+SCHED_FIFO : диапазон [1;99]
+SCHED_RR : диапазон [1;99]
+SCHED_OTHER: диапазон [0;0]
+
+------------------------- ЗАДАНИЕ 5.4 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ: 
+# - Политика планирования SCHED_RR использует алгоритм циклического 
+#   планирования с вытеснением на основе приоритетов и временных квантов.
+# - При одинаковых приоритетах процессы выполняются циклически, каждый получает 
+#   фиксированный квант времени (100 мс), после чего CPU переключается на следующий процесс.
+# - При разных приоритетах процессы с более высоким приоритетом получают CPU первыми,
+#   а процессы с низким приоритетом выполняются только когда нет готовых процессов 
+#   с более высоким приоритетом.
+# - Функция sched_yield() позволяет процессу добровольно отказаться от оставшейся части 
+#   своего временного кванта, перейдя в конец очереди процессов с тем же приоритетом.
+# - Диапазон приоритетов для SCHED_RR составляет от 1 до 99, как и для SCHED_FIFO.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.4/./5.4.sh
+Пт 18 апр 2025 02:56:53 MSK
+
+===== Запуск процессов с политикой RR с одинаковым приоритетом =====
+
+Запуск процесса: prog1, приоритет: 35
+Запуск процесса: prog2, приоритет: 35
+Запуск процесса: prog3, приоритет: 35
+Запуск процесса: prog4, приоритет: 35
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264360], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264361], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264363], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264362], policy=[SCHED_RR], priority=[35]
+
+
+===== Запуск процессов с политикой RR с разным приоритетом =====
+
+Запуск процесса: prog1, приоритет: 70
+Запуск процесса: prog2, приоритет: 10
+Запуск процесса: prog3, приоритет: 35
+Запуск процесса: prog4, приоритет: 35
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog1: PPID=[264329], PID=[264624], policy=[SCHED_RR], priority=[70]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264627], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264626], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+prog2: PPID=[264329], PID=[264625], policy=[SCHED_RR], priority=[10]
+
+
+===== Запуск процессов с политикой RR и sched_yield =====
+
+Запуск процесса: prog1, приоритет: 35
+Запуск процесса: prog2, приоритет: 35
+Запуск процесса: prog3, приоритет: 35
+Запуск процесса: prog4, приоритет: 35
+Запуск процесса: yield, приоритет: 35
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+yield: PPID=[264329], PID=[264882], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog3: PPID=[264329], PID=[264880], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog4: PPID=[264329], PID=[264881], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+prog1: PPID=[264329], PID=[264878], policy=[SCHED_RR], priority=[35]
+prog2: PPID=[264329], PID=[264879], policy=[SCHED_RR], priority=[35]
+
+
+==== Вычисление величины кванта для политики RR ====
+
+quant: Величина кванта RR: 0.100000000 секунд
+quant: Величина кванта, определенная в /proc/sys/kernel/sched_rr_timeslice_ms: 
+100
+
+------------------------- ЗАДАНИЕ 5.5 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ: 
+# - Политика планирования действительно имеет более высокий приоритет, 
+#   чем числовое значение приоритета. 
+# - Политики реального времени (FIFO, RR) всегда приоритетнее SCHED_OTHER. 
+# - При этом SCHED_FIFO является неквантованной политикой (процесс выполняется непрерывно), 
+#   а SCHED_RR - квантованной (процесс получает ограниченный квант времени), что объясняет 
+#   различия в их поведении при конкуренции между собой и с SCHED_OTHER.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.5/./5.5.sh
+Пт 18 апр 2025 02:57:35 MSK
+
+===== Запуск процессов с разной политикой с одинаковым приоритетом =====
+
+
+--- Запуск в порядке: fifo, rr, other ---
+
+Запуск процесса: prog-sched-fifo
+Запуск процесса: prog-sched-rr
+Запуск процесса: prog-sched-other
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266454], policy=[SCHED_FIFO], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266455], policy=[SCHED_RR], priority=[1]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266456], policy=[SCHED_OTHER], nice=[-20]
+
+--- Запуск в порядке: other, rr, fifo ---
+
+Запуск процесса: prog-sched-other
+Запуск процесса: prog-sched-rr
+Запуск процесса: prog-sched-fifo
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266633], policy=[SCHED_FIFO], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266632], policy=[SCHED_RR], priority=[1]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266631], policy=[SCHED_OTHER], nice=[-20]
+
+--- Запуск в порядке: rr, other, fifo ---
+
+Запуск процесса: prog-sched-rr
+Запуск процесса: prog-sched-other
+Запуск процесса: prog-sched-fifo
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-fifo: PPID=[266438], PID=[266793], policy=[SCHED_FIFO], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-rr: PPID=[266438], PID=[266791], policy=[SCHED_RR], priority=[1]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+prog-sched-other: PPID=[266438], PID=[266792], policy=[SCHED_OTHER], nice=[-20]
+
+------------------------- ЗАДАНИЕ 5.6 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Политики SCHED_FIFO и SCHED_RR имеют преимущество над SCHED_OTHER
+# - Для потоков одного процесса с SCHED_FIFO порядок выполнения потоков
+#   определяется их приоритетом
+# - Для независимых процессов c SCHED_FIFO порядок выполения не зависит от
+#   приоритета (порядок выполнения определяется порядком запуска)
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.6/./5.6.sh
+Пт 18 апр 2025 02:58:24 MSK
+
+===== Определяем политику планирования по умолчанию =====
+
+Поток [0]: TID=[187275], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187275], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187275], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187275], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187275], policy=[SCHED_OTHER], priority=[0]
+
+===== Изменяем политику планирования для всех потоков =====
+
+Поток [0]: TID=[187332], policy=[SCHED_FIFO], priority=[10]
+Поток [0]: TID=[187332], policy=[SCHED_FIFO], priority=[10]
+Поток [0]: TID=[187332], policy=[SCHED_FIFO], priority=[10]
+Поток [0]: TID=[187332], policy=[SCHED_FIFO], priority=[10]
+Поток [0]: TID=[187332], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187388], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187388], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187388], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187388], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187388], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187389], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187389], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187389], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187389], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187389], policy=[SCHED_FIFO], priority=[10]
+
+===== Запускаем 3 потока с разной политикой =====
+
+--- Порядок запуска ---
+1)SCHED_OTHER
+2)SCHED_RR
+3)SCHED_FIFO
+
+Поток [2]: TID=[187463], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187463], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187463], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187463], policy=[SCHED_FIFO], priority=[10]
+Поток [2]: TID=[187463], policy=[SCHED_FIFO], priority=[10]
+Поток [1]: TID=[187462], policy=[SCHED_RR], priority=[10]
+Поток [1]: TID=[187462], policy=[SCHED_RR], priority=[10]
+Поток [1]: TID=[187462], policy=[SCHED_RR], priority=[10]
+Поток [1]: TID=[187462], policy=[SCHED_RR], priority=[10]
+Поток [1]: TID=[187462], policy=[SCHED_RR], priority=[10]
+Поток [0]: TID=[187461], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187461], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187461], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187461], policy=[SCHED_OTHER], priority=[0]
+Поток [0]: TID=[187461], policy=[SCHED_OTHER], priority=[0]
+
+===== Запускаем 2 потока одного процесса с разным приоритетом =====
+
+--- Запуск с политикой SCHED_FIFO ---
+
+Поток [1-parent]: TID=[187594], policy=[SCHED_FIFO], priority=[99]
+Поток [1-parent]: TID=[187594], policy=[SCHED_FIFO], priority=[99]
+Поток [1-parent]: TID=[187594], policy=[SCHED_FIFO], priority=[99]
+Поток [1-parent]: TID=[187594], policy=[SCHED_FIFO], priority=[99]
+Поток [1-parent]: TID=[187594], policy=[SCHED_FIFO], priority=[99]
+Поток [0-parent]: TID=[187576], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187576], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187576], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187576], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187576], policy=[SCHED_FIFO], priority=[10]
+
+===== Запускаем 2 потока независимых процессов с разным приоритетом =====
+
+--- Запуск с политикой SCHED_FIFO ---
+
+Поток [0-parent]: TID=[187646], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187646], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187646], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187646], policy=[SCHED_FIFO], priority=[10]
+Поток [0-parent]: TID=[187646], policy=[SCHED_FIFO], priority=[10]
+Поток [0-child]: TID=[187715], policy=[SCHED_FIFO], priority=[99]
+Поток [0-child]: TID=[187715], policy=[SCHED_FIFO], priority=[99]
+Поток [0-child]: TID=[187715], policy=[SCHED_FIFO], priority=[99]
+Поток [0-child]: TID=[187715], policy=[SCHED_FIFO], priority=[99]
+Поток [0-child]: TID=[187715], policy=[SCHED_FIFO], priority=[99]
+
+======================ЗАДАНИЕ 6======================
+
+------------------------- ЗАДАНИЕ 6.1 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - Файловые дескрипторы наследуются при fork(), что позволяет родителю и потомку
+#   записывать в один и тот же файл.
+# - Файловые дескрипторы сохраняются после exec(), если они не были закрыты или
+#   переопределены, что позволяет новой программе продолжать запись в файл.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 6/6.1/./6.1.sh 
+Пт 18 апр 2025 02:59:11 MSK
+
+===== Тест 6.1.1: fork() =====
+Файл 6.1_fork.log создан
+
+--- Содержимое файла 6.1_fork.log ---
+
+Родитель записал до fork
+Потомок записал через fork
+Родитель записал после fork
+
+===== Тест 6.1.2: exec() =====
+Файл 6.1_exec.log создан
+
+--- Содержимое файла 6.1_fork.log ---
+
+Родитель записал до fork
+Потомок записал через fork
+Родитель записал после fork
+
+------------------------- ЗАДАНИЕ 6.2 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - При использовании fork(), приоритет и политика планирования полностью
+#   наследуются дочерним процессом от родительского (SCHED_RR, приоритет 50).
+# - При использовании exec(), приоритет и политика планирования сохраняются
+#   (SCHED_FIFO, приоритет 50) даже после запуска новой программы.
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 6/6.2/./6.2.sh
+Пт 18 апр 2025 02:59:21 MSK
+
+===== Тест 6.2.1: fork() =====
+Родитель (до fork): PPID=[188232], PID=[188243], policy=[SCHED_RR], priority=[50]
+Потомок: PPID=[188243], PID=[188244], policy=[SCHED_RR], priority=[50]
+
+===== Тест 6.2.2: exec() =====
+Родитель (до exec): PPID=[188232], PID=[188243], policy=[SCHED_FIFO], priority=[50]
+Потомок (exec): PPID=[188243], PID=[188245], policy=[SCHED_FIFO], priority=[50]
+
+------------------------- ЗАДАНИЕ 6.3 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - При использовании fork(), обработчики сигналов полностью наследуются
+#   дочерним процессом от родительского, как показывает вызов обработчика
+#   сигнала SIGUSR1 в дочернем процессе.
+# - При использовании exec(), диспозиции сигналов (игнорирование или обработка
+#   по умолчанию) сохраняются, но пользовательские обработчики сбрасываются 
+#   до действия по умолчанию.
+# - Это демонстрирует, что fork() полностью копирует модель обработки сигналов,
+#   а exec() сохраняет только диспозиции, но не указатели на функции-обработчики,
+#   так как они указывают на код, который заменяется при exec().
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 6/6.3/./6.3.sh
+Пт 18 апр 2025 02:59:27 MSK
+
+===== Тест 6.3.1: fork() =====
+father: PPID=[188347], PID=[188358]
+son: PPID=[188359], PID=[188358]
+Обработчик: PPID=[188358], PID=[188359], signal=[10]
+
+===== Тест 6.3.2: exec() =====
+father: PPID=[188347], PID=[188358]
+exec-потомок: PPID=[188358], PID=[188388]
+
+Сигнал 10: по умолчанию
+Сигнал 12: игнорируется
+
+------------------------- ЗАДАНИЕ 6.4 -------------------------
+
+# РЕЗУЛЬТАТЫ И ВЫВОДЫ:
+# - При использовании clone(), файловые дескрипторы полностью наследуются
+#   дочерним процессом, что позволяет потомку работать с теми же открытыми
+#   файлами, что и родитель.
+# - Политика планирования и приоритет (SCHED_FIFO с приоритетом 50) также
+#   наследуются потомком, созданным через clone().
+# - Обработчики сигналов и их диспозиции наследуются через clone(), включая
+#   как пользовательские обработчики (для SIGUSR1 и SIGTERM), так и
+#   игнорирование сигналов (для SIGINT и SIGHUP).
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 6/6.4/./6.4.sh
+Пт 18 апр 2025 02:59:36 MSK
+
+===== Тест 6.4.1: Наследование файловых дескрипторов через clone() =====
+Файл 6.4_clone_fd.log создан
+
+--- Cодержимое файла 6.4_clone_fd.log ---
+
+Родитель записал до clone
+Потомок clone записал
+Родитель записал после clone
+
+===== Тест 6.4.2: Наследование политики планирования через clone() =====
+Родитель: PPID=[319831], PID=[319837], policy=[SCHED_FIFO], priority=[50]
+Потомок clone: PPID=[319837], PID=[319841], policy=[SCHED_FIFO], priority=[50]
+
+===== Тест 6.4.3: Наследование сигналов через clone() =====
+Потомок: PPID=[319837], PID=[319842]
+Сигнал SIGUSR1 (10): пользовательский обработчик (0x610bb5a8078a)
+Сигнал SIGTERM (15): пользовательский обработчик (0x610bb5a8078a)
+Сигнал SIGINT (2): игнорируется
+Сигнал SIGHUP (1): игнорируется
+Ожидаю сигнал...
+
+Родитель отправляет сигналы:
+Обработчик сигнала 10 в PID=[319842]
+
+Script done on 2025-04-18 02:59:46+03:00 [COMMAND_EXIT_CODE="0"]
+
+======================Защита лабораторной======================
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && 6/6.3/./6.3.sh 
+Пт 18 апр 2025 14:50:35 MSK
+
+===== Тест 6.3.1: fork() =====
+father: PPID=[215978], PID=[215989]
+son: PPID=[215990], PID=[215989]
+Обработчик: PPID=[215989], PID=[215990], signal=[10]
+
+===== Тест 6.3.2: exec() =====
+father: PPID=[215978], PID=[215989]
+exec-потомок: PPID=[215989], PID=[216022]
+
+Сигнал 10: по умолчанию
+Сигнал 12: игнорируется
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 6/6.4/./6.4.sh 
+Пт 18 апр 2025 14:51:19 MSK
+[sudo] пароль для saico: 
+
+===== Тест 6.4.1: Наследование файловых дескрипторов через clone() =====
+Файл 6.4_clone_fd.log создан
+
+--- Cодержимое файла 6.4_clone_fd.log ---
+
+Родитель записал до clone
+Потомок clone записал
+Родитель записал после clone
+
+===== Тест 6.4.2: Наследование политики планирования через clone() =====
+Родитель: PPID=[320246], PID=[320252], policy=[SCHED_FIFO], priority=[50]
+Потомок clone: PPID=[320252], PID=[320256], policy=[SCHED_FIFO], priority=[50]
+
+===== Тест 6.4.3: Наследование сигналов через clone() =====
+Потомок: PPID=[320252], PID=[320257]
+Сигнал SIGUSR1 (10): пользовательский обработчик (0x64ca135ee78a)
+Сигнал SIGTERM (15): пользовательский обработчик (0x64ca135ee78a)
+Сигнал SIGINT (2): игнорируется
+Сигнал SIGHUP (1): игнорируется
+Ожидаю сигнал...
+
+Родитель отправляет сигналы:
+Обработчик сигнала 10 в PID=[320257]
+
+mukhamed@mukhamed-virtualbox:~/repo/mine/os/lb2$ date && sudo 5/5.3/./5.3.sh 
+Пт 18 апр 2025 14:56:17 MSK
+
+===== Запуск процессов с политикой FIFO с одинаковым приоритетом =====
+
+Запуск процесса: prog1, приоритет: 35
+Запуск процесса: prog2, приоритет: 35
+Запуск процесса: prog3, приоритет: 35
+Запуск процесса: prog4, приоритет: 35
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog1: PPID=[267456], PID=[267482], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog2: PPID=[267456], PID=[267483], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog3: PPID=[267456], PID=[267484], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+prog4: PPID=[267456], PID=[267485], policy=[SCHED_FIFO], priority=[35]
+
+
+===== Запуск процессов с политикой FIFO с разным приоритетом =====
+
+Запуск процесса: prog1, приоритет: 70
+Запуск процесса: prog2, приоритет: 10
+Запуск процесса: prog3, приоритет: 5
+Запуск процесса: prog4, приоритет: 90
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog4: PPID=[267456], PID=[267761], policy=[SCHED_FIFO], priority=[90]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog1: PPID=[267456], PID=[267758], policy=[SCHED_FIFO], priority=[70]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog2: PPID=[267456], PID=[267759], policy=[SCHED_FIFO], priority=[10]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+prog3: PPID=[267456], PID=[267760], policy=[SCHED_FIFO], priority=[5]
+
+
+===== Границы различных приоритетов =====
+
+SCHED_FIFO : диапазон [1;99]
+SCHED_RR : диапазон [1;99]
+SCHED_OTHER: диапазон [0;0]
